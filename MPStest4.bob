@@ -1,0 +1,1923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-15 14:44:14 by linac-pc-->
+<display version="2.0.0">
+  <name>LINAC Steerere Interface</name>
+  <width>500</width>
+  <height>951</height>
+  <background_color>
+    <color name="Button_Background" red="210" green="210" blue="210">
+    </color>
+  </background_color>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)</name>
+    <x>389</x>
+    <y>864</y>
+    <width>1</width>
+    <height>1</height>
+    <states>
+      <state>
+        <value>0</value>
+        <label>State 1</label>
+        <color>
+          <color name="Off" red="60" green="100" blue="60">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>State 2</label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <x>360</x>
+    <y>167</y>
+    <width>286</width>
+    <height>55</height>
+    <visible>false</visible>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Progress Bar</name>
+    <y>259</y>
+    <width>2</width>
+    <height>1</height>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>Tab 1</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 2</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <x>660</x>
+    <y>880</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_62</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>69</x>
+    <y>70</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>119</x>
+    <y>75</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_63</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>139</x>
+    <y>70</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_53</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>209</x>
+    <y>70</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>QDX1</text>
+    <x>20</x>
+    <y>70</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_76</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>70</x>
+    <y>98</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_7</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>120</x>
+    <y>103</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_77</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>140</x>
+    <y>98</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_60</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>210</x>
+    <y>98</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_78</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>69</x>
+    <y>70</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_8</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>119</x>
+    <y>75</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_79</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>139</x>
+    <y>70</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_61</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>209</x>
+    <y>70</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_80</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>70</x>
+    <y>98</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_9</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>120</x>
+    <y>103</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_81</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>140</x>
+    <y>98</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_62</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>210</x>
+    <y>98</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_82</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>69</x>
+    <y>70</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_10</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>119</x>
+    <y>75</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_83</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>139</x>
+    <y>70</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_63</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>209</x>
+    <y>70</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>QDX2</text>
+    <x>20</x>
+    <y>98</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_84</name>
+    <pv_name>QDX2:i_rd_raw</pv_name>
+    <x>70</x>
+    <y>98</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_11</name>
+    <pv_name>QDX2:ON_RSTS</pv_name>
+    <x>120</x>
+    <y>103</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_85</name>
+    <pv_name>QDX2:SetI_con</pv_name>
+    <x>140</x>
+    <y>98</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_64</name>
+    <pv_name>QDX2:ON_CMD</pv_name>
+    <x>210</x>
+    <y>98</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX2:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>QDX3</text>
+    <x>20</x>
+    <y>127</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_86</name>
+    <pv_name>QDX3:i_rd_raw</pv_name>
+    <x>70</x>
+    <y>127</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_12</name>
+    <pv_name>QDX3:ON_RSTS</pv_name>
+    <x>120</x>
+    <y>132</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_87</name>
+    <pv_name>QDX3:SetI_con</pv_name>
+    <x>140</x>
+    <y>127</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_65</name>
+    <pv_name>QDX3:ON_CMD</pv_name>
+    <x>210</x>
+    <y>127</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX3:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_90</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>303</x>
+    <y>72</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_14</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>353</x>
+    <y>77</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_91</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>373</x>
+    <y>72</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_67</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>443</x>
+    <y>72</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_92</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>304</x>
+    <y>100</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_15</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>354</x>
+    <y>105</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_93</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>374</x>
+    <y>100</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_68</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>444</x>
+    <y>100</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>QDY1</text>
+    <x>254</x>
+    <y>72</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_94</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>303</x>
+    <y>72</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_16</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>353</x>
+    <y>77</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_95</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>373</x>
+    <y>72</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_69</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>443</x>
+    <y>72</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_96</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>304</x>
+    <y>100</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_17</name>
+    <pv_name>QDX1:ON_RSTS</pv_name>
+    <x>354</x>
+    <y>105</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_97</name>
+    <pv_name>QDX1:SetI_con</pv_name>
+    <x>374</x>
+    <y>100</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_70</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>444</x>
+    <y>100</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_98</name>
+    <pv_name>QDY1:i_rd_raw</pv_name>
+    <x>303</x>
+    <y>72</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_18</name>
+    <pv_name>QDY1:ON_RSTS</pv_name>
+    <x>353</x>
+    <y>77</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_99</name>
+    <pv_name>QDY1:SetI_con</pv_name>
+    <x>373</x>
+    <y>72</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_71</name>
+    <pv_name>QDY1:ON_CMD</pv_name>
+    <x>443</x>
+    <y>72</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_22</name>
+    <text>QDY2</text>
+    <x>254</x>
+    <y>101</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_100</name>
+    <pv_name>QDY2:i_rd_raw</pv_name>
+    <x>304</x>
+    <y>100</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_19</name>
+    <pv_name>QDY2:ON_RSTS</pv_name>
+    <x>354</x>
+    <y>105</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_101</name>
+    <pv_name>QDY2:SetI_con</pv_name>
+    <x>374</x>
+    <y>100</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_72</name>
+    <pv_name>QDY2:ON_CMD</pv_name>
+    <x>444</x>
+    <y>100</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY2:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_23</name>
+    <text>QDY3</text>
+    <x>254</x>
+    <y>129</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_102</name>
+    <pv_name>QDY3:i_rd_raw</pv_name>
+    <x>304</x>
+    <y>129</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_20</name>
+    <pv_name>QDY3:ON_RSTS</pv_name>
+    <x>354</x>
+    <y>134</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_103</name>
+    <pv_name>QDY3:SetI_con</pv_name>
+    <x>374</x>
+    <y>129</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_73</name>
+    <pv_name>QDY3:ON_CMD</pv_name>
+    <x>444</x>
+    <y>129</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY3:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>Text Symbol</name>
+    <x>710</x>
+    <y>720</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LINAC BeamLine Magnet Control</text>
+    <x>130</x>
+    <y>40</y>
+    <width>219</width>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>Lin1</name>
+        <children>
+          <widget type="navtabs" version="2.0.0">
+            <name>Navigation Tabs_2</name>
+            <tabs>
+              <tab>
+                <name>QDX1</name>
+                <file>MPSXsub.bob</file>
+                <macros>
+                  <N>1</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX2</name>
+                <file>MPSXsub.bob</file>
+                <macros>
+                  <N>2</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX3</name>
+                <file>MPSXsub.bob</file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX4</name>
+                <file>MPSXsub.bob</file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX5</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX6</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX7</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+            </tabs>
+            <x>8</x>
+            <y>22</y>
+            <width>711</width>
+            <height>160</height>
+            <direction>0</direction>
+            <tab_width>60</tab_width>
+            <selected_color>
+              <color red="204" green="255" blue="255">
+              </color>
+            </selected_color>
+            <font>
+              <font family="Liberation Mono" style="BOLD" size="10.0">
+              </font>
+            </font>
+            <actions>
+            </actions>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>Lin2</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <x>40</x>
+    <y>180</y>
+    <width>800</width>
+    <height>238</height>
+  </widget>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs_3</name>
+    <tabs>
+      <tab>
+        <name>QDX1</name>
+        <file>MPSXsub.bob</file>
+        <macros>
+          <N>1</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX2</name>
+        <file>MPSXsub.bob</file>
+        <macros>
+          <N>2</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX3</name>
+        <file>MPSXsub1.bob</file>
+        <macros>
+          <N>QDX1</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX4</name>
+        <file>MPSXsub.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX5</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX6</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX7</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDX8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>131</x>
+    <y>450</y>
+    <width>711</width>
+    <height>160</height>
+    <direction>0</direction>
+    <tab_width>60</tab_width>
+    <selected_color>
+      <color red="204" green="255" blue="255">
+      </color>
+    </selected_color>
+    <font>
+      <font family="Liberation Mono" style="BOLD" size="10.0">
+      </font>
+    </font>
+    <actions>
+    </actions>
+  </widget>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>QDY1</name>
+        <file>MPSYsub.bob</file>
+        <macros>
+          <N>1</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY2</name>
+        <file>MPSYsub.bob</file>
+        <macros>
+          <N>2</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY3</name>
+        <file>MPSYsub.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY4</name>
+        <file>MPSYsub.bob</file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY5</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY6</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY7</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY8</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY9</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY10</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY11</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY12</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>QDY13</name>
+        <file></file>
+        <macros>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>131</x>
+    <y>680</y>
+    <width>616</width>
+    <height>178</height>
+    <direction>0</direction>
+    <tab_width>40</tab_width>
+    <tab_spacing>3</tab_spacing>
+    <selected_color>
+      <color red="204" green="255" blue="255">
+      </color>
+    </selected_color>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="12.0">
+      </font>
+    </font>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+</display>

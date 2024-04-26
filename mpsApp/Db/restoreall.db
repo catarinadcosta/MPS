@@ -1,0 +1,24 @@
+record(ao, $(USER):SetI_con_Restore)
+{
+
+}
+record(ao, $(USER):ON_CMD_Restore)
+{
+
+}
+
+
+record(seq, $(USER):SavePV)
+{
+  field(DOL2, "$(USER):SetI_con")
+  field(LNK2, "$(USER):SetI_con_Restore PP")
+   field(DOL1, "$(USER):ON_CMD PP")
+  field(LNK1, "$(USER):ON_CMD_Restore PP")
+  }
+record(seq, $(USER):RestorePV)
+{
+  field(DOL1, "$(USER):SetI_con_Restore PP")
+  field(LNK1, "$(USER):SetI_con PP")
+  field(DOL2, "$(USER):ON_CMD_Restore PP")
+  field(LNK2, "$(USER):ON_CMD PP")
+} 

@@ -1,0 +1,11 @@
+record(mbbo, $(USER):Set_Range)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Ranges")
+  field (ZRVL,"10")
+  field (ONVL,"200")
+  field (TWVL,"1000")
+  field (ZRST,"10")
+  field (ONST,"200")
+  field (TWST,"1000")
+}

@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-02-27 11:11:16 by linac-pc-->
+<display version="2.0.0">
+  <name>LINAC Steerere Interface</name>
+  <width>960</width>
+  <height>896</height>
+  <background_color>
+    <color name="Button_Background" red="210" green="210" blue="210">
+    </color>
+  </background_color>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)</name>
+    <x>389</x>
+    <y>864</y>
+    <width>1</width>
+    <height>1</height>
+    <states>
+      <state>
+        <value>0</value>
+        <label>State 1</label>
+        <color>
+          <color name="Off" red="60" green="100" blue="60">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>State 2</label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <x>360</x>
+    <y>167</y>
+    <width>286</width>
+    <height>55</height>
+    <visible>false</visible>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Progress Bar</name>
+    <y>259</y>
+    <width>2</width>
+    <height>1</height>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>Tab 1</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 2</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <x>660</x>
+    <y>880</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>TabX</name>
+    <macros>
+      <QD1X>10</QD1X>
+    </macros>
+    <tabs>
+      <tab>
+        <name>QDX1</name>
+        <children>
+          <widget type="spinner" version="2.0.0">
+            <name>set_current_56</name>
+            <pv_name>MPS1:SetI_con</pv_name>
+            <x>201</x>
+            <y>8</y>
+            <width>150</width>
+            <height>40</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="18.0">
+              </font>
+            </font>
+            <format>0</format>
+            <background_color>
+              <color red="255" green="255" blue="255">
+              </color>
+            </background_color>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+            <actions execute_as_one="true">
+            </actions>
+            <rules>
+              <rule name="enable Rule" prop_id="increment" out_exp="true">
+                <exp bool_exp="true">
+                  <expression>pvStr0</expression>
+                </exp>
+                <pv_name>All:Set_Ranges</pv_name>
+              </rule>
+            </rules>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <maximum>999999.0</maximum>
+          </widget>
+          <widget type="bool_button" version="2.0.0">
+            <name>Set _dir_52</name>
+            <pv_name>MPS1:ON_CMD</pv_name>
+            <x>164</x>
+            <y>8</y>
+            <width>30</width>
+            <off_label>OFF</off_label>
+            <off_color>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </off_color>
+            <off_image>OFF</off_image>
+            <on_label>ON</on_label>
+            <show_led>false</show_led>
+            <actions execute_as_one="true">
+              <action type="write_pv">
+                <pv_name>MPS1:ON_CMD</pv_name>
+                <value>0</value>
+                <description>WritePV</description>
+              </action>
+            </actions>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+          </widget>
+          <widget type="scaledslider" version="2.0.0">
+            <name>Text Entry_12</name>
+            <pv_name>MPS1:SetI_con</pv_name>
+            <x>8</x>
+            <y>92</y>
+            <width>340</width>
+            <height>30</height>
+            <background_color>
+              <color name="DISCONNECTED" red="200" green="0" blue="200" alpha="200">
+              </color>
+            </background_color>
+            <scale_format></scale_format>
+            <level_hihi></level_hihi>
+            <level_high></level_high>
+            <level_low></level_low>
+            <level_lolo></level_lolo>
+            <show_hihi>false</show_hihi>
+            <show_high>false</show_high>
+            <show_low>false</show_low>
+            <show_lolo>false</show_lolo>
+            <actions>
+            </actions>
+            <rules>
+              <rule name="New Rule" prop_id="increment" out_exp="false">
+                <exp bool_exp="true">
+                  <value>pvStr0</value>
+                </exp>
+                <pv_name>All:Set_Ranges</pv_name>
+              </rule>
+            </rules>
+            <tooltip></tooltip>
+            <maximum>499999.0</maximum>
+            <limits_from_pv>false</limits_from_pv>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_1</name>
+            <text>QD1X</text>
+            <x>5</x>
+            <y>10</y>
+            <width>72</width>
+            <font>
+              <font family="Liberation Sans" style="BOLD" size="18.0">
+              </font>
+            </font>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LED_2</name>
+            <pv_name>MPS1:ILK_RSTS</pv_name>
+            <x>84</x>
+            <y>55</y>
+            <width>15</width>
+            <height>15</height>
+            <off_color>
+              <color name="OK" red="0" green="255" blue="0">
+              </color>
+            </off_color>
+            <on_color>
+              <color name="MAJOR" red="255" green="0" blue="0">
+              </color>
+            </on_color>
+            <rules>
+              <rule name="New Rule" prop_id="off_color" out_exp="false">
+                <pv_name>$(pv_name)</pv_name>
+              </rule>
+            </rules>
+            <tooltip>$(MPS1:FLT_MAG_OV_TEMP.val
+$(pv_value)</tooltip>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LED_3</name>
+            <pv_name>MPS1:ON_RSTS</pv_name>
+            <x>170</x>
+            <y>55</y>
+            <width>15</width>
+            <height>15</height>
+            <off_color>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </off_color>
+            <rules>
+              <rule name="New Rule" prop_id="off_color" out_exp="false">
+                <pv_name>$(pv_name)</pv_name>
+              </rule>
+            </rules>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LED_1</name>
+            <pv_name>MPS1:RDY_RSTS</pv_name>
+            <x>12</x>
+            <y>55</y>
+            <width>15</width>
+            <height>15</height>
+            <off_color>
+              <color name="OK" red="0" green="255" blue="0">
+              </color>
+            </off_color>
+            <on_color>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </on_color>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="8.0">
+              </font>
+            </font>
+            <rules>
+              <rule name="New Rule" prop_id="off_color" out_exp="false">
+                <pv_name>$(pv_name)</pv_name>
+              </rule>
+            </rules>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+          </widget>
+          <widget type="radio" version="2.0.0">
+            <name>SET_CURRENT RANGE_55</name>
+            <pv_name>All:Set_Ranges</pv_name>
+            <x>234</x>
+            <y>55</y>
+            <width>121</width>
+            <height>21</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="12.0">
+              </font>
+            </font>
+            <items>
+              <item>F</item>
+              <item>M</item>
+              <item>C</item>
+            </items>
+            <items_from_pv>false</items_from_pv>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_61</name>
+            <pv_name>MPS1:i_rd_raw</pv_name>
+            <x>73</x>
+            <y>10</y>
+            <width>86</width>
+            <font>
+              <font family="Liberation Mono" style="REGULAR" size="20.0">
+              </font>
+            </font>
+            <foreground_color>
+              <color red="0" green="0" blue="255">
+              </color>
+            </foreground_color>
+            <format>1</format>
+            <precision>0</precision>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_4</name>
+            <text>ON/OFF</text>
+            <x>153</x>
+            <y>75</y>
+            <width>46</width>
+            <height>12</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="10.0">
+              </font>
+            </font>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_3</name>
+            <text>NLK</text>
+            <x>80</x>
+            <y>75</y>
+            <width>24</width>
+            <height>12</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="10.0">
+              </font>
+            </font>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_2</name>
+            <text>Ready</text>
+            <x>6</x>
+            <y>75</y>
+            <width>30</width>
+            <height>12</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="10.0">
+              </font>
+            </font>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>QDX2</name>
+        <children>
+          <widget type="spinner" version="2.0.0">
+            <name>set_current_58</name>
+            <pv_name>MPS2:SetI_con</pv_name>
+            <x>18</x>
+            <y>17</y>
+            <width>180</width>
+            <height>35</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="18.0">
+              </font>
+            </font>
+            <format>0</format>
+            <background_color>
+              <color red="255" green="255" blue="255">
+              </color>
+            </background_color>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+            <actions execute_as_one="true">
+            </actions>
+            <rules>
+              <rule name="increment" prop_id="increment" out_exp="true">
+                <exp bool_exp="true">
+                  <expression>pvStr0</expression>
+                </exp>
+                <pv_name>All:Set_Ranges</pv_name>
+              </rule>
+            </rules>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <maximum>999999.0</maximum>
+          </widget>
+          <widget type="scaledslider" version="2.0.0">
+            <name>Text Entry_11</name>
+            <x>228</x>
+            <y>35</y>
+            <width>190</width>
+            <height>50</height>
+            <background_color>
+              <color name="Button_Background" red="210" green="210" blue="210">
+              </color>
+            </background_color>
+            <level_hihi>999999.0</level_hihi>
+            <level_high>800000.0</level_high>
+            <level_low>200000.0</level_low>
+            <level_lolo>100000.0</level_lolo>
+            <show_hihi>false</show_hihi>
+            <show_high>false</show_high>
+            <show_low>false</show_low>
+            <show_lolo>false</show_lolo>
+            <rules>
+              <rule name="selector" prop_id="pv_name" out_exp="false">
+                <exp bool_exp="pvStr=MPS1">
+                  <value>loc://toggle&lt;VEnum&gt;(0,"MPS1","MPS2","MPS3","MPS4")</value>
+                </exp>
+                <pv_name>loc://toggle&lt;VEnum&gt;(0,"MPS1","MPS2","MPS3","MPS4")c://toggle</pv_name>
+              </rule>
+              <rule name="selector1" prop_id="pv_name" out_exp="false">
+                <exp bool_exp="pv0=1.00">
+                  <value>loc://number(1)</value>
+                </exp>
+                <pv_name>loc://toggle</pv_name>
+              </rule>
+              <rule name="selector2" prop_id="pv_name" out_exp="false">
+                <exp bool_exp="pv0=2.00">
+                  <value>loc://number(2)</value>
+                </exp>
+                <pv_name>loc://toggle</pv_name>
+              </rule>
+            </rules>
+            <tooltip></tooltip>
+            <increment>100.0</increment>
+            <maximum>999999.0</maximum>
+            <limits_from_pv>false</limits_from_pv>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>QDX3</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 4</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 5</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 6</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 7</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 8</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 9</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 10</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 11</name>
+        <children>
+        </children>
+      </tab>
+      <tab>
+        <name>Tab 12</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <x>70</x>
+    <y>320</y>
+    <width>370</width>
+    <height>170</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <active_tab>2</active_tab>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="tabs[3].name" out_exp="false">
+        <exp bool_exp="QD1X">
+          <value>Tab 4</value>
+        </exp>
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="tank" version="2.0.0">
+    <name>Tank</name>
+    <x>230</x>
+    <y>580</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs_3</name>
+    <tabs>
+      <tab>
+        <name>X1</name>
+        <children>
+          <widget type="spinner" version="2.0.0">
+            <name>set_current_56</name>
+            <pv_name>MPS2:SetI_con</pv_name>
+            <x>201</x>
+            <y>8</y>
+            <width>150</width>
+            <height>40</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="18.0">
+              </font>
+            </font>
+            <format>0</format>
+            <background_color>
+              <color red="255" green="255" blue="255">
+              </color>
+            </background_color>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+            <actions execute_as_one="true">
+            </actions>
+            <rules>
+              <rule name="enable Rule" prop_id="increment" out_exp="true">
+                <exp bool_exp="true">
+                  <expression>pvStr0</expression>
+                </exp>
+                <pv_name>All:Set_Ranges</pv_name>
+              </rule>
+            </rules>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <maximum>999999.0</maximum>
+          </widget>
+          <widget type="bool_button" version="2.0.0">
+            <name>Set _dir_52</name>
+            <pv_name>MPS2:ON_CMD</pv_name>
+            <x>164</x>
+            <y>8</y>
+            <width>30</width>
+            <off_label>OFF</off_label>
+            <off_color>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </off_color>
+            <off_image>OFF</off_image>
+            <on_label>ON</on_label>
+            <show_led>false</show_led>
+            <actions execute_as_one="true">
+              <action type="write_pv">
+                <pv_name>MPS2:ON_CMD</pv_name>
+                <value>0</value>
+                <description>WritePV</description>
+              </action>
+            </actions>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+          </widget>
+          <widget type="scaledslider" version="2.0.0">
+            <name>Text Entry_12</name>
+            <pv_name>MPS2:SetI_con</pv_name>
+            <x>8</x>
+            <y>92</y>
+            <width>340</width>
+            <height>30</height>
+            <background_color>
+              <color name="DISCONNECTED" red="200" green="0" blue="200" alpha="200">
+              </color>
+            </background_color>
+            <scale_format></scale_format>
+            <level_hihi></level_hihi>
+            <level_high></level_high>
+            <level_low></level_low>
+            <level_lolo></level_lolo>
+            <show_hihi>false</show_hihi>
+            <show_high>false</show_high>
+            <show_low>false</show_low>
+            <show_lolo>false</show_lolo>
+            <actions>
+            </actions>
+            <rules>
+              <rule name="New Rule" prop_id="increment" out_exp="false">
+                <exp bool_exp="true">
+                  <value>pvStr0</value>
+                </exp>
+                <pv_name>All:Set_Ranges</pv_name>
+              </rule>
+            </rules>
+            <tooltip></tooltip>
+            <maximum>499999.0</maximum>
+            <limits_from_pv>false</limits_from_pv>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_1</name>
+            <text>MPS1Y</text>
+            <x>5</x>
+            <y>10</y>
+            <width>72</width>
+            <font>
+              <font family="Liberation Sans" style="BOLD" size="18.0">
+              </font>
+            </font>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LED_2</name>
+            <pv_name>MPS1:ILK_RSTS</pv_name>
+            <x>84</x>
+            <y>55</y>
+            <width>15</width>
+            <height>15</height>
+            <off_color>
+              <color name="OK" red="0" green="255" blue="0">
+              </color>
+            </off_color>
+            <on_color>
+              <color name="MAJOR" red="255" green="0" blue="0">
+              </color>
+            </on_color>
+            <rules>
+              <rule name="New Rule" prop_id="off_color" out_exp="false">
+                <pv_name>$(pv_name)</pv_name>
+              </rule>
+            </rules>
+            <tooltip>$(MPS1:FLT_MAG_OV_TEMP.val
+$(pv_value)</tooltip>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LED_3</name>
+            <pv_name>MPS2:ON_RSTS</pv_name>
+            <x>170</x>
+            <y>55</y>
+            <width>15</width>
+            <height>15</height>
+            <off_color>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </off_color>
+            <rules>
+              <rule name="New Rule" prop_id="off_color" out_exp="false">
+                <pv_name>$(pv_name)</pv_name>
+              </rule>
+            </rules>
+          </widget>
+          <widget type="led" version="2.0.0">
+            <name>LED_1</name>
+            <pv_name>MPS2:RDY_RSTS</pv_name>
+            <x>12</x>
+            <y>55</y>
+            <width>15</width>
+            <height>15</height>
+            <off_color>
+              <color name="OK" red="0" green="255" blue="0">
+              </color>
+            </off_color>
+            <on_color>
+              <color name="Grid" red="128" green="128" blue="128">
+              </color>
+            </on_color>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="8.0">
+              </font>
+            </font>
+            <rules>
+              <rule name="New Rule" prop_id="off_color" out_exp="false">
+                <pv_name>$(pv_name)</pv_name>
+              </rule>
+            </rules>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+          </widget>
+          <widget type="radio" version="2.0.0">
+            <name>SET_CURRENT RANGE_55</name>
+            <pv_name>All:Set_Ranges</pv_name>
+            <x>234</x>
+            <y>55</y>
+            <width>121</width>
+            <height>21</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="12.0">
+              </font>
+            </font>
+            <items>
+              <item>F</item>
+              <item>M</item>
+              <item>C</item>
+            </items>
+            <items_from_pv>false</items_from_pv>
+          </widget>
+          <widget type="textupdate" version="2.0.0">
+            <name>Text Update_61</name>
+            <pv_name>MPS2:i_rd_raw</pv_name>
+            <x>73</x>
+            <y>10</y>
+            <width>86</width>
+            <font>
+              <font family="Liberation Mono" style="REGULAR" size="20.0">
+              </font>
+            </font>
+            <foreground_color>
+              <color red="0" green="0" blue="255">
+              </color>
+            </foreground_color>
+            <format>1</format>
+            <precision>0</precision>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_4</name>
+            <text>ON/OFF</text>
+            <x>153</x>
+            <y>75</y>
+            <width>46</width>
+            <height>12</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="10.0">
+              </font>
+            </font>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_3</name>
+            <text>NLK</text>
+            <x>80</x>
+            <y>75</y>
+            <width>24</width>
+            <height>12</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="10.0">
+              </font>
+            </font>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+          <widget type="label" version="2.0.0">
+            <name>Label_2</name>
+            <text>Ready</text>
+            <x>6</x>
+            <y>75</y>
+            <width>30</width>
+            <height>12</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="10.0">
+              </font>
+            </font>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>X2</name>
+        <children>
+          <widget type="spinner" version="2.0.0">
+            <name>set_current_58</name>
+            <pv_name>MPS2:SetI_con</pv_name>
+            <x>18</x>
+            <y>17</y>
+            <width>180</width>
+            <height>35</height>
+            <font>
+              <font family="Liberation Sans" style="REGULAR" size="18.0">
+              </font>
+            </font>
+            <format>0</format>
+            <background_color>
+              <color red="255" green="255" blue="255">
+              </color>
+            </background_color>
+            <horizontal_alignment>1</horizontal_alignment>
+            <vertical_alignment>1</vertical_alignment>
+            <actions execute_as_one="true">
+            </actions>
+            <rules>
+              <rule name="increment" prop_id="increment" out_exp="true">
+                <exp bool_exp="true">
+                  <expression>pvStr0</expression>
+                </exp>
+                <pv_name>All:Set_Ranges</pv_name>
+              </rule>
+            </rules>
+            <border_alarm_sensitive>false</border_alarm_sensitive>
+            <maximum>999999.0</maximum>
+          </widget>
+          <widget type="scaledslider" version="2.0.0">
+            <name>Text Entry_11</name>
+            <x>228</x>
+            <y>35</y>
+            <width>190</width>
+            <height>50</height>
+            <background_color>
+              <color name="Button_Background" red="210" green="210" blue="210">
+              </color>
+            </background_color>
+            <level_hihi>999999.0</level_hihi>
+            <level_high>800000.0</level_high>
+            <level_low>200000.0</level_low>
+            <level_lolo>100000.0</level_lolo>
+            <show_hihi>false</show_hihi>
+            <show_high>false</show_high>
+            <show_low>false</show_low>
+            <show_lolo>false</show_lolo>
+            <rules>
+              <rule name="selector" prop_id="pv_name" out_exp="false">
+                <exp bool_exp="pvStr=MPS1">
+                  <value>loc://toggle&lt;VEnum&gt;(0,"MPS1","MPS2","MPS3","MPS4")</value>
+                </exp>
+                <pv_name>loc://toggle&lt;VEnum&gt;(0,"MPS1","MPS2","MPS3","MPS4")c://toggle</pv_name>
+              </rule>
+              <rule name="selector1" prop_id="pv_name" out_exp="false">
+                <exp bool_exp="pv0=1.00">
+                  <value>loc://number(1)</value>
+                </exp>
+                <pv_name>loc://toggle</pv_name>
+              </rule>
+              <rule name="selector2" prop_id="pv_name" out_exp="false">
+                <exp bool_exp="pv0=2.00">
+                  <value>loc://number(2)</value>
+                </exp>
+                <pv_name>loc://toggle</pv_name>
+              </rule>
+            </rules>
+            <tooltip></tooltip>
+            <increment>100.0</increment>
+            <maximum>999999.0</maximum>
+            <limits_from_pv>false</limits_from_pv>
+          </widget>
+        </children>
+      </tab>
+    </tabs>
+    <x>450</x>
+    <y>320</y>
+    <width>370</width>
+    <height>170</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <active_tab>1</active_tab>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_5</name>
+    <text>QD1X</text>
+    <x>110</x>
+    <y>80</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+    <scripts>
+      <script file="EmbeddedPy">
+        <text><![CDATA[# Embedded python script
+from org.csstudio.display.builder.runtime.script import PVUtil, ScriptUtil
+print 'Hello'
+# widget.setPropertyValue('text', PVUtil.getString(pvs[0]))]]></text>
+        <pv_name>pva://tabs_2/QDX1</pv_name>
+      </script>
+    </scripts>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_62</name>
+    <pv_name>MPS1:i_rd_raw</pv_name>
+    <x>160</x>
+    <y>80</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>MPS1:ON_RSTS</pv_name>
+    <x>210</x>
+    <y>85</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_63</name>
+    <pv_name>MPS1:SetI_con</pv_name>
+    <x>230</x>
+    <y>80</y>
+    <width>60</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_53</name>
+    <pv_name>MPS1:ON_CMD</pv_name>
+    <x>300</x>
+    <y>80</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MPS1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_1</name>
+    <pv_name>loc://onoff</pv_name>
+    <x>660</x>
+    <y>850</y>
+    <rules>
+      <rule name="New Rule" prop_id="states[0].value" out_exp="true">
+        <exp bool_exp="pv0">
+          <expression>states[0].value value</expression>
+        </exp>
+        <pv_name>loc://onoff</pv_name>
+      </rule>
+      <rule name="New Rule" prop_id="states[1].value" out_exp="true">
+        <exp bool_exp="pv0">
+          <expression>states[1].value value</expression>
+        </exp>
+        <pv_name>loc://onoff</pv_name>
+      </rule>
+      <rule name="New Rule" prop_id="states[2].value" out_exp="true">
+        <exp bool_exp="pv0">
+          <expression>states[2].value value</expression>
+        </exp>
+        <pv_name>loc://error</pv_name>
+      </rule>
+    </rules>
+    <states>
+      <state>
+        <value>0</value>
+        <label>State 1</label>
+        <color>
+          <color name="Off" red="60" green="100" blue="60">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>State 2</label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label>State 3</label>
+        <color>
+          <color name="State 2" red="10" green="0" blue="80">
+          </color>
+        </color>
+      </state>
+    </states>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry</name>
+    <pv_name>loc://onoff</pv_name>
+    <x>510</x>
+    <y>70</y>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <pv_name>loc://onoff</pv_name>
+    <x>600</x>
+    <y>700</y>
+  </widget>
+  <widget type="textentry" version="3.0.0">
+    <name>Text Entry_1</name>
+    <pv_name>loc://error</pv_name>
+    <x>490</x>
+    <y>760</y>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button_1</name>
+    <pv_name>loc://error</pv_name>
+    <x>610</x>
+    <y>760</y>
+    <off_label>no</off_label>
+    <on_label>err</on_label>
+    <on_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_1</name>
+    <actions>
+      <action type="command">
+        <command>TabX[0]=1</command>
+        <description>Execute Command</description>
+      </action>
+    </actions>
+    <x>90</x>
+    <y>120</y>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+</display>

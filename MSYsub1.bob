@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-22 12:03:24 by linac-pc-->
+<display version="2.0.0">
+  <name>Display</name>
+  <width>750</width>
+  <height>130</height>
+  <grid_color>
+    <color name="Write_Background" red="128" green="255" blue="255">
+    </color>
+  </grid_color>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>$(N)</text>
+    <x>8</x>
+    <y>11</y>
+    <width>72</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="21.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_53</name>
+    <pv_name>$(N):SetREVFWD_ONOFF</pv_name>
+    <x>373</x>
+    <y>10</y>
+    <width>30</width>
+    <off_label>R</off_label>
+    <off_color>
+      <color red="51" green="77" blue="179">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color red="255" green="255" blue="77">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(N):SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_62</name>
+    <pv_name>$(N):Measure_I</pv_name>
+    <x>209</x>
+    <y>11</y>
+    <width>98</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>3</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>set_current_57</name>
+    <pv_name>$(N):SetI_con</pv_name>
+    <x>417</x>
+    <y>10</y>
+    <width>143</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="21.0">
+      </font>
+    </font>
+    <format>0</format>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+    </actions>
+    <rules>
+      <rule name="enable Rule" prop_id="increment" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Ranges</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <maximum>65535.0</maximum>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Text Entry_13</name>
+    <pv_name>$(N):SetI_con</pv_name>
+    <x>5</x>
+    <y>45</y>
+    <width>740</width>
+    <height>30</height>
+    <transparent>false</transparent>
+    <scale_format></scale_format>
+    <level_hihi></level_hihi>
+    <level_high></level_high>
+    <level_low></level_low>
+    <level_lolo></level_lolo>
+    <show_hihi>false</show_hihi>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <show_lolo>false</show_lolo>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="increment Rule" prop_id="increment" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Ranges</pv_name>
+      </rule>
+      <rule name="Maximum rule" prop_id="maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Slider_Y</pv_name>
+      </rule>
+      <rule name="minimum Rule" prop_id="minimum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pv0</expression>
+        </exp>
+        <pv_name>All:Set_Slider_Y.RVAL</pv_name>
+      </rule>
+    </rules>
+    <tooltip></tooltip>
+    <minimum></minimum>
+    <maximum></maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>$(N):GetDI__NUM_REVFWD.B6</pv_name>
+    <x>141</x>
+    <y>15</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="255" green="255" blue="77">
+      </color>
+    </on_color>
+    <tooltip>$(N):GetDI__NUM_REVFWD.B6</tooltip>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>SET_CURRENT RANGE_56</name>
+    <pv_name>All:Set_Ranges</pv_name>
+    <x>583</x>
+    <y>15</y>
+    <width>107</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <items>
+      <item>F</item>
+      <item>M</item>
+      <item>C</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>REV/FWD</text>
+    <x>126</x>
+    <y>33</y>
+    <width>52</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <x>30</x>
+    <y>320</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>SET_CURRENT RANGE_57</name>
+    <pv_name>All:Set_Slider_Y</pv_name>
+    <x>457</x>
+    <y>93</y>
+    <width>278</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <items>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>MAX</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+</display>

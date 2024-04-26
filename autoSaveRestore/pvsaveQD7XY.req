@@ -1,0 +1,9 @@
+QDX7:ON_CMD
+QDX7:SetI_con
+QDX7:ON_CMD_Restore
+QDX7:SetI_con_Restore
+
+QDY7:ON_CMD
+QDY7:SetI_con
+QDY7:ON_CMD_Restore
+QDY7:SetI_con_Restore

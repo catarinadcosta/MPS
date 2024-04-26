@@ -1,0 +1,9 @@
+BM1:ON_CMD
+BM1:SetI_con
+BM1:ON_CMD_Restore
+BM1:SetI_con_Restore
+
+BM2:ON_CMD
+BM2:SetI_con
+BM2:ON_CMD_Restore
+BM2:SetI_con_Restore

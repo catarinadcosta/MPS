@@ -1,0 +1,9 @@
+SWM1:ON_CMD
+SWM1:SetI_con
+SWM1:ON_CMD_Restore
+SWM1:SetI_con_Restore
+
+SWM2:ON_CMD
+SWM2:SetI_con
+SWM2:ON_CMD_Restore
+SWM2:SetI_con_Restore

@@ -1,0 +1,648 @@
+#
+# Danfysik SYS-9100 power supply
+# record(bi, $(USER):RMT_RSTS)
+# {
+#   field(DESC, "Local/Remote state")
+#   field(DTYP, "stream")
+#   field(SCAN, ".5 second")
+#   field(INP,  "@SYS9100.proto getRemoteMode() $(HWUNIT)")
+#   field(ONAM, "Remote")
+#   field(ZNAM, "Local")
+# }
+
+#------------------------------------------------------------------------------
+# RESET command
+#------------------------------------------------------------------------------
+
+record(bo, $(USER):RST_CMD)
+{
+  field(DESC, "Local/Remote command")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,  "@SYS9100.proto setRemoteMode() $(HWUNIT)")
+  field(ONAM, "Remote")
+  field(ZNAM, "Local")
+}
+
+#------------------------------------------------------------------------------
+# on status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):ON_OFF)
+{
+  field(DESC, "On/Off status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "On")
+  field(ZNAM, "Off")
+}
+
+#------------------------------------------------------------------------------
+# ready status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):RDY_STS)
+{
+  field(DESC, "Ready status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Ready")
+  field(ZNAM, "NotReady")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):ALL_NLK)
+{
+  field(DESC, "ALL Interlock status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):ILK_RSTS)
+{
+  field(DESC, "Interlock status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_DOOR_SW)
+{
+  field(DESC, "Fault Panic Door status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_MPS_TEMP)
+{
+  field(DESC, "Fault MPS OverTemperature status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_MAG_TEMP)
+{
+  field(DESC, "Fault Magnet OverTemperature status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_THERMAL)
+{
+  field(DESC, "Fault Thermal Breaker status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_EARTH)
+{
+  field(DESC, "Fault Earth Leakage status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_MPS_WATER)
+{
+  field(DESC, "Fault MPS WaterFlow status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_MAGWATER)
+{
+  field(DESC, "Fault Magnet WaterFlow status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_PHASE)
+{
+  field(DESC, "Fault Phase failure Status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_DC_OV_LOAD)
+{
+  field(DESC, "Fault DC Overload status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# interlock status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+record(bi, $(USER):FLT_DC_OVCURR)
+{
+  field(DESC, "Fault DC OverCurrent status")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Interlock")
+  field(ZNAM, "Okay")
+}
+#------------------------------------------------------------------------------
+# polarity status
+# (filled in by status word transform record)
+#------------------------------------------------------------------------------
+
+record(bi, $(USER):NPOL_RSTS)
+{
+  field(DESC, "Output voltage reading")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "Normal")
+  field(ZNAM, "Reversed")
+}
+
+#------------------------------------------------------------------------------
+# status word
+#------------------------------------------------------------------------------
+
+record(ai, $(USER):statwd1)
+{
+  field(DESC, "raw status word 1")
+  field(DTYP, "stream")
+  field(SCAN, "1 second")
+  field(EGU,  "")
+  field(INP,  "@SYS9100.proto getStatusWord1() $(HWUNIT)")
+  field(ADEL, "1")
+  field(PINI,"YES")
+}
+
+
+#------------------------------------------------------------------------------
+# temperature
+#------------------------------------------------------------------------------
+
+# record(ai, $(USER):T_RD)
+# {
+#   field(DESC, "Temperature")
+#   field(DTYP, "stream")
+#   field(SCAN, "2 second")
+#   field(EGU,  "degC")
+#   field(INP,  "@SYS9100.proto getAD(1) $(HWUNIT)")
+#   field(ADEL, "1")
+# }
+
+#------------------------------------------------------------------------------
+# current reading
+#------------------------------------------------------------------------------
+
+record(ai, $(USER):i_rd_raw)
+{
+  field(DESC, "Output current reading")
+  field(DTYP, "stream")
+  field(SCAN, "1 second")
+  field(EGU,  "A")
+  field(INP,  "@SYS9100.proto getAD(0) $(HWUNIT)")
+  field(ADEL, "1")
+  field(FLNK, "$(USER):I_RD  PP NMS")
+  field(PINI, "YES")
+}
+
+record(calc, $(USER):I_RD)
+{
+  field(DESC, "Output current reading")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+  field(EGU,  "A")
+  field(CALC, "A/100")
+  field(INPA, "$(USER):i_rd_raw  NPP MS")
+  field(ADEL, "0.1")
+}
+
+#------------------------------------------------------------------------------
+# voltage reading
+#------------------------------------------------------------------------------
+
+# record(ai, $(USER):v_rd_raw)
+# {
+#   field(DESC, "Output voltage reading raw")
+#   field(DTYP, "stream")
+#   field(SCAN, ".2 second")
+#   field(EGU,  "")
+#   field(INP,  "@SYS9100.proto getAD(12) $(HWUNIT)")
+#   field(ADEL, "1")
+#   field(FLNK, "$(USER):V_RD  PP NMS")
+# }
+
+# record(calc, $(USER):V_RD)
+# {
+#   field(DESC, "Output voltage reading")
+#   field(SCAN, "Passive")
+#   field(PREC, "2")
+#   field(EGU,  "V")
+#   field(CALC, "A/10")
+#   field(INPA, "$(USER):v_rd_raw  NPP MS")
+#   field(ADEL, "0.1")
+# }
+
+#------------------------------------------------------------------------------
+# current setting readback
+#------------------------------------------------------------------------------
+
+record(ai, $(USER):i_rset_raw)
+{
+  field(DESC, "Current set readback, raw")
+  field(DTYP, "stream")
+  field(SCAN, ".2 second")
+  field(EGU,  "")
+  field(INP,  "@SYS9100.proto getDA(0) $(HWUNIT)")
+  field(ADEL, "1")
+}
+
+record(calc, $(USER):I_RSET)
+{
+  field(DESC, "Current set readback")
+  field(SCAN, "Passive")
+  field(EGU,  "A")
+  field(PREC, "3")
+  field(CALC, "A/1000.0")
+  field(INPA, "$(USER):i_rset_raw  CP MS")
+  field(ADEL, "0.01")
+}
+
+#------------------------------------------------------------------------------
+# current setting
+#------------------------------------------------------------------------------
+
+record(ao, $(USER):I_CSET)
+{
+  field(DESC, "Current setting")
+  field(SCAN, "Passive")
+  field(EGU,  "A")
+  field(PREC, "3")
+  field(DRVL, "0")
+  field(DRVH, "100")
+  field(ADEL, "0.01")
+  field(FLNK, "$(USER):i_cset_raw")
+}
+
+record(calcout, $(USER):i_cset_raw)
+{
+  field(DESC, "Current setting, raw")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(EGU,  "")
+  field(PREC, "3")
+  field(CALC, "A*1000")
+  field(INPA, "$(USER):I_CSET NPP NMS")
+  field(OUT,  "@SYS9100.proto setDA(0) $(HWUNIT)")
+  field(OOPT, "Every Time")
+  field(ADEL, "0.01")
+}
+record (ao, $(USER):SetI_con)
+{
+  field (DESC, "SetCurrent in A")
+  field (DTYP, "stream")
+  field (EGU, "BIT")
+  field (OUT,  "@SYS9100.proto setDA(0) $(HWUNIT)")
+  field (DRVL, "0")
+  field (DRVH, "999999")
+  #field (DOL, "$(USER):InrDcr_SetI.VAL NPP NMS")
+  #field (OOPT, "Every Time")
+  field (ADEL, "1")
+ }   
+
+record(mbbo, All:Set_Ranges)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Ranges")
+  field (ZRVL,"10")
+  field (ONVL,"200")
+  field (TWVL,"1000")
+  field (ZRST,"10")
+  field (ONST,"200")
+  field (TWST,"1000")
+}
+
+record(mbbo, All:Set_Slider)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_MinVAlue")
+  field (ZRVL,"0")
+  field (ONVL,"20000")
+  field (TWVL,"10000")
+  field (ZRST,"30000")
+  field (ONST,"40000")
+  field (TWST,"999999")
+}
+record(mbbo, All:Set_Slider_X)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_Max-X")
+  field (ZRVL,"0")
+  field (ONVL,"100000")
+  field (TWVL,"200000")
+  field (THVL,"300000")
+  field (FRVL,"400000")
+  field (FVVL,"0")
+  field (ZRST,"99999")
+  field (ONST,"199999")
+  field (TWST,"299999")
+  field (THST,"399999")
+  field (FRST,"499999")
+  field (FVST,"999999")
+  field(FLNK,"All:Make_Min")
+  field(PINI,"YES")
+}
+record(mbbo, All:Set_Slider_Y)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_Max-Y")
+  field (ZRVL,"0")
+  field (ONVL,"100000")
+  field (TWVL,"200000")
+  field (THVL,"300000")
+  field (FRVL,"400000")
+  field (FVVL,"0")
+  field (ZRST,"99999")
+  field (ONST,"199999")
+  field (TWST,"299999")
+  field (THST,"399999")
+  field (FRST,"499999")
+  field (FVST,"999999")
+  field(FLNK,"All:Make_Min")
+  field(PINI,"YES")
+}
+record(calcout,All:Make_Min)
+{
+field(CALC,"A")
+field(INPA,"All:Set_Slider_Max.VAL")
+field(OUT,"All:Set_Slider_Min PP")
+}
+
+
+record(mbbo, All:Set_Slider_Min)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_MaxVAlue")
+  field (ZRVL,"0")
+  field (ZRST,"0")
+  field (ONST,"200000")
+  field (TWST,"0")
+}
+
+record(bi, $(USER):INC_BIT)
+{
+  field(DESC, "Read INC bit")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(VAL,"1")
+  field(ONAM, "INC")
+  field(ZNAM, "NA")
+  field(FLNK,"$(USER):Inr_SetI") 
+ }
+record(bi, $(USER):DEC_BIT)
+{
+  field(DESC, "Read DEC bit")
+  field(DTYP, "Soft Channel")
+  field(SCAN, "Passive")
+  field(ONAM, "DEC")
+  field(VAL,"1")
+  field(ZNAM, "NA")
+  field(FLNK,"$(USER):Decr_SetI") 
+}
+
+
+record(calcout,$(USER):Decr_SetI)
+{
+field(CALC, "A-B")
+field(INPA,"$(USER):SetI_con.VAL PP NMS")
+field(INPB, "$(USER):Set_Ranges.RVAL PP NMS")
+field(HIGH,"999999")
+field(LOW,"0")
+field(OUT,"$(USER):SetI_con.PROC") 
+}
+
+record(calcout,$(USER):Inr_SetI)
+{
+field(CALC, "A+B")
+field(INPA,"$(USER):SetI_con.VAL PP NMS")
+field(INPB, "$(USER):Set_Ranges.RVAL PP NMS")
+field(HIGH,"999999")
+field(LOW,"0")
+field(OUT,"$(USER):SetI_con.PROC") 
+}
+
+
+# record(calcout,$(USER):InrDcr_SetI)
+# {
+
+# field(INPA,"$(USER):INC_BIT.VAL PP MS")
+# field(INPB,"$(USER):DEC_BIT.VAL PP MS")
+# field(INPC,"All:Set_Ranges.RVAL PP MS")
+# field(INPD,"$(USER):SetI_con.VAL PP NMS")
+# field(CALC,"(A)?(D+C):(D-C)")
+# field(FLNK,"$(USER):SetI_con") 
+#   #field (OOPT, "Every Time")
+#   #field (ADEL, "1")
+# }
+
+# record(transform,$(USER):InrDcr_SetI)
+# {
+#   field(DESC, "Increment_decremet")
+#   field(SCAN, "Passive")
+#   field(PREC, "3")
+#   field(INPA, "$(USER):INC_BIT")
+#   field(INPB, "$(USER):DEC_BIT")
+#   field(INPC,"$(USER):Set_Ranges.RVAL PP MS")
+#   field(INPD,"$(USER):SetI_con.VAL PP NMS")
+ 
+#   field(CMTE, "INCR bit")
+#   field(CLCE, "(A)? C+D:D")  # 
+#   field(OUTE, "$(USER):SetI_con.VAL PP NMS")
+#   field(CMTF, "DECR bit")
+#   field(CLCF, "(B)? D-C:D")  # 
+#   field(OUTF, "$(USER):SetI_con.VAL PP NMS")
+
+
+
+
+
+# record(calc,$(USER):InrDcr_SetI)
+# {
+# field(CALC,"(A==1)?(D+C):(B==1)?(D-C)")
+# field(INPA,"$(USER):Get_Incr NPP MS")
+# field(INPB,"$(USER):Get_Decr NPP MS")
+# field(INPC,"$(USER):Set_Ranges.RVAL PP MS")
+# field(INPD,"$(USER):InrDcr_SetI.VAL NPP NMS")
+# field(FLNK,"$(USER):SetI_con") 
+#   #field (OOPT, "Every Time")
+#   #field (ADEL, "1")
+# }
+# #------------------------------------------------------------------------------
+# device on command
+#------------------------------------------------------------------------------
+
+record(bo, $(USER):ON_CMD)
+{
+  field(DESC, "Device on/off cmd")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,  "@SYS9100.proto setOnOff() $(HWUNIT)")
+  field(ONAM, "On")
+  field(ZNAM, "Off")
+}
+
+#------------------------------------------------------------------------------
+# device reset command
+#------------------------------------------------------------------------------
+
+record(bo, $(USER):RST_CMD)
+{
+  field(DESC, "Device reset cmd")
+  field(DTYP, "stream")
+  field(SCAN, "Passive")
+  field(OUT,  "@SYS9100.proto reset() $(HWUNIT)")
+  field(ONAM, "Reset")
+  field(ZNAM, "0")
+  field(FLNK,"$(USER):ON_CMD")
+}
+
+#------------------------------------------------------------------------------
+# test command/query interface
+#------------------------------------------------------------------------------
+
+record(ao, $(USER):RAW_CMD)
+{
+  field(DESC, "raw command")
+  field(SCAN, "Passive")
+  field(DTYP, "stream")
+  field(OUT,  "@SYS9100.proto sendRawCommand() $(HWUNIT)")
+}
+
+record(ao, $(USER):RAW_QUERY)
+{
+  field(DESC, "raw query")
+  field(SCAN, "Passive")
+  field(DTYP, "stream")
+  field(OUT, "@SYS9100.proto sendRawQuery($(USER):RAW_REPLY.VAL) $(HWUNIT)")
+}
+record(ai, $(USER):RAW_REPLY)
+{
+  field(DESC, "raw query reply")
+  field(SCAN, "Passive")
+  field(DTYP, "Soft Channel")
+}
+
+
+record(transform, $(USER):stat_trf)
+{
+  field(DESC, "intermediate record")
+  field(SCAN, "Passive")
+  field(PREC, "3")
+
+
+  field(CMTA, "Status input")
+  field(INPA, "$(USER):statwd1 CP MS")
+
+  field(CMTB, "ON off STATUS")
+  field(CLCB, "(A & 8388608)?0:1")  # 0x800000 (bit  1)  1=off
+  field(OUTB, "$(USER):ON_OFF  PP MS")
+  
+  field(CMTC, "Summary interlock bit")
+  field(CLCC, "(A & 16384)?1:0")    # 0x004000 (bit 10)  1=intlk
+  field(OUTC, "$(USER):ALL_NLK  PP MS")
+
+  field(CMTD, "DC OverCurrent")
+  field(CLCD, "(A & 8192)?1:0")        # 0x002000 (bit 11)  1=fault
+  field(OUTD, "$(USER):FLT_DC_OVCURR  PP MS")
+ 
+  field(CMTE, "DC Overload")
+  field(CLCE, "(A & 4096)?1:0")        # 0x001000 (bit 12)  1=fault
+  field(OUTE, "$(USER):FLT_DC_OV_LOAD  PP MS")
+
+  field(CMTF, "Phase Failure")
+  field(CLCF, "(A & 512)?1:0")        # 0x000200 (bit 15)  1=fault
+  field(OUTF, "$(USER):FLT_PHASE PP MS")
+
+  field(CMTG, "MPS WaterFlow Failure")
+  field(CLCG, "(A & 256)?1:0")        # 0x000100 (bit 16)  1=fault
+  field(OUTG, "$(USER):FLT_MPS_WATER  PP MS")
+
+  field(CMTH, "Earth Leakage fault")
+  field(CLCH, "(A & 128)?1:0")       # 0x000080 (bit 17)  1=fault
+  field(OUTH, "$(USER):FLT_EARTH  PP MS")
+  
+  field(CMTI, "Thermal Breaker")
+  field(CLCI, "(A & 64)?1:0")       # 0x000040 (bit 18)  1=fault
+  field(OUTI, "$(USER):FLT_THERMAL PP MS")
+
+  field(CMTJ, "MPS OverTemperature")
+  field(CLCJ, "(A & 32)?1:0")        # 0x000020 (bit 19)  1=fault
+  field(OUTJ, "$(USER):FLT_MPS_TEMP  PP MS")
+
+
+  field(CMTK, "PANIC DOOR SWITCH")
+  field(CLCK, "(A & 16)?1:0")        # 0x000010 (bit 20)  1=fault
+  field(OUTK, "$(USER):FLT_DOOR_SW  PP MS")
+
+  field(CMTL, "Magnet Waterflow Failure ")
+  field(CLCL, "(A & 8)?1:0")        # 0x000004 (bit 22)  1=fault
+  field(OUTL, "$(USER):FLT_MAG_WATER  PP MS")
+
+  field(CMTM, "Magnet OverTemperature ")
+  field(CLCM, "(A & 4)?1:0")        # 0x000004 (bit 22)  1=fault
+  field(OUTM, "$(USER):FLT_MAG_TEMP  PP MS")
+
+  field(CMTN, "Ready")
+  field(CLCN, "(A & 2)?0:1")        # 0x000002 (bit 23)  1=not ready
+  field(OUTN, "$(USER):RDY_STS  PP MS")
+  
+  
+
+  }

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-03-07 17:48:55 by linac-pc-->
+<display version="2.0.0">
+  <name>Display</name>
+  <width>599</width>
+  <height>101</height>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>QDY$(N)</text>
+    <y>42</y>
+    <width>67</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="18.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_53</name>
+    <pv_name>QDY$(N):ON_CMD</pv_name>
+    <x>305</x>
+    <y>40</y>
+    <width>30</width>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY$(N):ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_62</name>
+    <pv_name>QDY$(N):i_rd_raw</pv_name>
+    <x>212</x>
+    <y>42</y>
+    <width>86</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>set_current_57</name>
+    <pv_name>QDY$(N):SetI_con</pv_name>
+    <x>345</x>
+    <y>40</y>
+    <width>115</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="18.0">
+      </font>
+    </font>
+    <format>0</format>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+    </actions>
+    <rules>
+      <rule name="enable Rule" prop_id="increment" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Ranges</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <maximum>999999.0</maximum>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Text Entry_13</name>
+    <pv_name>QDY$(N):SetI_con</pv_name>
+    <y>78</y>
+    <width>599</width>
+    <height>30</height>
+    <background_color>
+      <color name="DISCONNECTED" red="200" green="0" blue="200" alpha="200">
+      </color>
+    </background_color>
+    <scale_format></scale_format>
+    <level_hihi></level_hihi>
+    <level_high></level_high>
+    <level_low></level_low>
+    <level_lolo></level_lolo>
+    <show_hihi>false</show_hihi>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <show_lolo>false</show_lolo>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="increment Rule" prop_id="increment" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Ranges</pv_name>
+      </rule>
+    </rules>
+    <tooltip></tooltip>
+    <minimum>150000.0</minimum>
+    <maximum>499999.0</maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>QDY$(N):ILK_RSTS</pv_name>
+    <x>130</x>
+    <y>44</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <tooltip>$(QDX$(N):FLT_MAG_OV_TEMP)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>QDY$(N):RDY_RSTS</pv_name>
+    <x>79</x>
+    <y>44</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>QDY$(N):ON_OFF</pv_name>
+    <x>180</x>
+    <y>44</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>SET_CURRENT RANGE_56</name>
+    <pv_name>All:Set_Ranges</pv_name>
+    <x>470</x>
+    <y>50</y>
+    <width>121</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <items>
+      <item>F</item>
+      <item>M</item>
+      <item>C</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Ready</text>
+    <x>70</x>
+    <y>66</y>
+    <width>30</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>NLK</text>
+    <x>129</x>
+    <y>67</y>
+    <width>24</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>ON/OFF</text>
+    <x>176</x>
+    <y>67</y>
+    <width>46</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>Magnet Control Y</text>
+    <x>176</x>
+    <y>10</y>
+    <width>208</width>
+    <height>23</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+  </widget>
+</display>
