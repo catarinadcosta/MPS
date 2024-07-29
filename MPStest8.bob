@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-04-05 16:38:24 by linacp206-->
+<!--Saved on 2024-06-04 17:02:03 by linacp206-->
 <display version="2.0.0">
   <name>LINAC Steerere Interface</name>
   <width>944</width>
@@ -4779,6 +4779,7 @@
       <font family="Liberation Sans" style="BOLD" size="14.0">
       </font>
     </font>
+    <active_tab>1</active_tab>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update</name>

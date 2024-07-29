@@ -1,10 +1,10 @@
-# autosave R5.3	Automatically generated - DO NOT MODIFY - 240408-102851
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 240729-174536
 QDX13:ON_CMD 0
-QDX13:SetI_con 14374.497237569
+QDX13:SetI_con 301667.02762431
 QDX13:ON_CMD_Restore 0
 QDX13:SetI_con_Restore 0
 QDY13:ON_CMD 0
-QDY13:SetI_con 11059.613259669
+QDY13:SetI_con 300000
 QDY13:ON_CMD_Restore 0
 QDY13:SetI_con_Restore 0
 <END>

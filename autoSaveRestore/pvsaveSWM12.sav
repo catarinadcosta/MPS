@@ -1,10 +1,10 @@
-# autosave R5.3	Automatically generated - DO NOT MODIFY - 240408-102822
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 240729-174326
 SWM1:ON_CMD 0
-SWM1:SetI_con 40469.208563536
+SWM1:SetI_con 7408.785911602
 SWM1:ON_CMD_Restore 0
 SWM1:SetI_con_Restore 0
 SWM2:ON_CMD 0
-SWM2:SetI_con 0
+SWM2:SetI_con 227900.32458564
 SWM2:ON_CMD_Restore 0
 SWM2:SetI_con_Restore 0
 <END>
