@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Saved on 2024-06-04 12:04:35 by linacp206-->
+<!--Saved on 2024-08-06 11:44:23 by linacp206-->
 <display version="2.0.0">
   <name>LINAC Steerere Interface</name>
   <width>944</width>
@@ -553,11 +553,12 @@
   <widget type="label" version="2.0.0">
     <name>Label</name>
     <text>LINAC BeamLine Magnet Control</text>
-    <x>110</x>
+    <x>260</x>
     <y>13</y>
-    <width>369</width>
+    <width>311</width>
+    <height>29</height>
     <font>
-      <font family="Liberation Sans" style="REGULAR" size="24.0">
+      <font family="Liberation Mono" style="REGULAR" size="24.0">
       </font>
     </font>
   </widget>
@@ -4922,13 +4923,9 @@
     <name>BM1</name>
     <text>BM1</text>
     <x>637</x>
-    <y>55</y>
+    <y>56</y>
     <width>40</width>
     <height>24</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_61</name>
@@ -4954,19 +4951,15 @@
     <name>BM2</name>
     <text>BM2</text>
     <x>637</x>
-    <y>85</y>
+    <y>86</y>
     <width>40</width>
     <height>24</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_63</name>
     <pv_name>Testla3:Measure_Testla</pv_name>
     <x>677</x>
-    <y>147</y>
+    <y>115</y>
     <width>102</width>
     <height>24</height>
     <font>
@@ -4986,19 +4979,15 @@
     <name>SW1</name>
     <text>SM1</text>
     <x>637</x>
-    <y>147</y>
+    <y>116</y>
     <width>40</width>
     <height>24</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
   </widget>
   <widget type="textupdate" version="2.0.0">
     <name>Text Update_64</name>
     <pv_name>Testla4:Measure_Testla</pv_name>
     <x>677</x>
-    <y>115</y>
+    <y>147</y>
     <width>102</width>
     <height>24</height>
     <font>
@@ -5018,12 +5007,8 @@
     <name>SM2</name>
     <text>SM2</text>
     <x>637</x>
-    <y>115</y>
+    <y>147</y>
     <width>40</width>
     <height>24</height>
-    <font>
-      <font family="Liberation Sans" style="REGULAR" size="16.0">
-      </font>
-    </font>
   </widget>
 </display>

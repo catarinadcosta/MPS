@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-04-03 17:21:26 by linacp206-->
+<display version="2.0.0">
+  <name>Display</name>
+  <width>750</width>
+  <height>130</height>
+  <grid_color>
+    <color name="Write_Background" red="128" green="255" blue="255">
+    </color>
+  </grid_color>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>$(N)</text>
+    <x>8</x>
+    <y>11</y>
+    <width>72</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="21.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_53</name>
+    <pv_name>$(N):ON_CMD</pv_name>
+    <x>373</x>
+    <y>10</y>
+    <width>30</width>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(N):ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_62</name>
+    <pv_name>$(N):i_rd_raw</pv_name>
+    <x>209</x>
+    <y>11</y>
+    <width>98</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="20.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <border_width>1</border_width>
+    <border_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </border_color>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>set_current_57</name>
+    <pv_name>$(N):SetI_con</pv_name>
+    <x>417</x>
+    <y>10</y>
+    <width>143</width>
+    <height>30</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="21.0">
+      </font>
+    </font>
+    <format>0</format>
+    <background_color>
+      <color red="255" green="255" blue="255">
+      </color>
+    </background_color>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+    </actions>
+    <rules>
+      <rule name="enable Rule" prop_id="increment" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Ranges</pv_name>
+      </rule>
+    </rules>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <maximum>999999.0</maximum>
+  </widget>
+  <widget type="scaledslider" version="2.0.0">
+    <name>Text Entry_13</name>
+    <pv_name>$(N):SetI_con</pv_name>
+    <x>5</x>
+    <y>45</y>
+    <width>740</width>
+    <height>30</height>
+    <transparent>false</transparent>
+    <scale_format></scale_format>
+    <level_hihi></level_hihi>
+    <level_high></level_high>
+    <level_low></level_low>
+    <level_lolo></level_lolo>
+    <show_hihi>false</show_hihi>
+    <show_high>false</show_high>
+    <show_low>false</show_low>
+    <show_lolo>false</show_lolo>
+    <actions>
+    </actions>
+    <rules>
+      <rule name="increment Rule" prop_id="increment" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Ranges</pv_name>
+      </rule>
+      <rule name="Maximum rule" prop_id="maximum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pvStr0</expression>
+        </exp>
+        <pv_name>All:Set_Slider_X</pv_name>
+      </rule>
+      <rule name="minimum Rule" prop_id="minimum" out_exp="true">
+        <exp bool_exp="true">
+          <expression>pv0</expression>
+        </exp>
+        <pv_name>All:Set_Slider_X.RVAL</pv_name>
+      </rule>
+    </rules>
+    <tooltip></tooltip>
+    <minimum></minimum>
+    <maximum></maximum>
+    <limits_from_pv>false</limits_from_pv>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_4</name>
+    <pv_name>$(N):ALL_NLK</pv_name>
+    <x>141</x>
+    <y>15</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <tooltip>$(QDX$(N):FLT_MAG_OV_TEMP)</tooltip>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_5</name>
+    <pv_name>$(N):RDY_STS</pv_name>
+    <x>100</x>
+    <y>15</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_6</name>
+    <pv_name>$(N):ON_OFF</pv_name>
+    <x>179</x>
+    <y>15</y>
+    <width>15</width>
+    <height>15</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>SET_CURRENT RANGE_56</name>
+    <pv_name>All:Set_Ranges</pv_name>
+    <x>583</x>
+    <y>15</y>
+    <width>107</width>
+    <height>21</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="12.0">
+      </font>
+    </font>
+    <items>
+      <item>F</item>
+      <item>M</item>
+      <item>C</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_8</name>
+    <text>Ready</text>
+    <x>91</x>
+    <y>33</y>
+    <width>30</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_9</name>
+    <text>NLK</text>
+    <x>135</x>
+    <y>33</y>
+    <width>24</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_10</name>
+    <text>ON/OFF</text>
+    <x>164</x>
+    <y>33</y>
+    <width>46</width>
+    <height>12</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)</name>
+    <pv_name>$(N):FLT_MPS_TEMP</pv_name>
+    <x>7</x>
+    <y>87</y>
+    <width>45</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>MPS OV_Temp</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>MPS OV_Temp</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_54</name>
+    <pv_name>$(N):RST_CMD</pv_name>
+    <x>320</x>
+    <y>11</y>
+    <width>30</width>
+    <off_label>RS</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>RS</on_label>
+    <on_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>$(N):RST_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <mode>1</mode>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_1</name>
+    <pv_name>$(N):FLT_MAG_TEMP</pv_name>
+    <x>57</x>
+    <y>86</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Magnet OV_Temp</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>Magnet OV_Temp</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_2</name>
+    <pv_name>$(N):FLT_PHASE</pv_name>
+    <x>107</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Phase Failure</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>Phase Failure</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED</name>
+    <x>30</x>
+    <y>320</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_3</name>
+    <pv_name>$(N):FLT_DC_OV_LOAD </pv_name>
+    <x>157</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>DC Overload</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>DC Overload</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_4</name>
+    <pv_name>$(N):FLT_MPS_WATER</pv_name>
+    <x>257</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>MPS WaterFlow</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>MPS WaterFlow</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_5</name>
+    <pv_name>$(N):FLT_DC_OVCURR</pv_name>
+    <x>207</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>DC OverCurr</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>DC OverCurr</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_6</name>
+    <pv_name>$(N):FLT_EARTH </pv_name>
+    <x>307</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Earth Leakage</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>Earth Leakage</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_7</name>
+    <pv_name>$(N):FLT_DOOR_SW </pv_name>
+    <x>357</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Door  Switch</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>Door Switch</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_8</name>
+    <pv_name>$(N):FLT_THERMAL</pv_name>
+    <x>407</x>
+    <y>87</y>
+    <width>45</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="9.0">
+      </font>
+    </font>
+    <line_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </line_color>
+    <square>true</square>
+    <actions>
+      <action type="open_display">
+        <file></file>
+        <target>replace</target>
+        <description>Open Display</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <states>
+      <state>
+        <value>0</value>
+        <label>Thermal Break</label>
+        <color>
+          <color name="OK" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label>Thermal Break</label>
+        <color>
+          <color name="STOP" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="Transparent" red="255" green="255" blue="255" alpha="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>SET_CURRENT RANGE_57</name>
+    <pv_name>All:Set_Slider_X</pv_name>
+    <x>457</x>
+    <y>93</y>
+    <width>278</width>
+    <height>25</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="10.0">
+      </font>
+    </font>
+    <actions>
+      <action type="write_pv">
+        <pv_name>$(pv_name)</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <items>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>MAX</item>
+    </items>
+    <items_from_pv>false</items_from_pv>
+  </widget>
+</display>

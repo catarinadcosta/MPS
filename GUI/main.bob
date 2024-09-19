@@ -1,0 +1,6413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Saved on 2024-09-19 17:01:57 by linacp206-->
+<display version="2.0.0">
+  <name>LINAC Steerere Interface</name>
+  <width>1600</width>
+  <height>900</height>
+  <background_color>
+    <color name="Button_Background" red="210" green="210" blue="210">
+    </color>
+  </background_color>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button</name>
+    <x>351</x>
+    <y>259</y>
+    <width>286</width>
+    <height>55</height>
+    <visible>false</visible>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="progressbar" version="2.0.0">
+    <name>Progress Bar</name>
+    <x>11</x>
+    <y>267</y>
+    <width>2</width>
+    <height>1</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_62</name>
+    <pv_name>QDX41:i_rd_raw</pv_name>
+    <x>60</x>
+    <y>55</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_76</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>61</x>
+    <y>85</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_60</name>
+    <pv_name>DM14:ON_CMD</pv_name>
+    <x>126</x>
+    <y>85</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>DM14:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_80</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>61</x>
+    <y>85</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_63</name>
+    <pv_name>QDX41:ON_CMD</pv_name>
+    <x>126</x>
+    <y>56</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX41:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_14</name>
+    <text>DM14</text>
+    <x>9</x>
+    <y>85</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_84</name>
+    <pv_name>DM14:i_rd_raw</pv_name>
+    <x>61</x>
+    <y>85</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_11</name>
+    <pv_name>DM14:ON_OFF</pv_name>
+    <x>111</x>
+    <y>90</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_15</name>
+    <text>QDX1</text>
+    <x>9</x>
+    <y>115</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_86</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>61</x>
+    <y>115</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_12</name>
+    <pv_name>QDX1:ON_OFF</pv_name>
+    <x>110</x>
+    <y>121</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_65</name>
+    <pv_name>QDX1:ON_CMD</pv_name>
+    <x>126</x>
+    <y>115</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_90</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>210</x>
+    <y>55</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_14</name>
+    <pv_name>QDY41:ON_OFF</pv_name>
+    <x>260</x>
+    <y>61</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_67</name>
+    <pv_name>QDY41:ON_CMD</pv_name>
+    <x>275</x>
+    <y>55</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_19</name>
+    <text>QDY41</text>
+    <x>161</x>
+    <y>55</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_94</name>
+    <pv_name>QDX1:i_rd_raw</pv_name>
+    <x>210</x>
+    <y>55</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_98</name>
+    <pv_name>QDY41:i_rd_raw</pv_name>
+    <x>210</x>
+    <y>55</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_23</name>
+    <text>QDY1</text>
+    <x>161</x>
+    <y>115</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_102</name>
+    <pv_name>QDY1:i_rd_raw</pv_name>
+    <x>211</x>
+    <y>115</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_20</name>
+    <pv_name>QDY1:ON_OFF</pv_name>
+    <x>261</x>
+    <y>121</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_73</name>
+    <pv_name>QDY1:ON_CMD</pv_name>
+    <x>275</x>
+    <y>115</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label</name>
+    <text>LINAC BeamLine Transportation</text>
+    <x>110</x>
+    <y>14</y>
+    <width>435</width>
+    <height>29</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="24.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs</name>
+    <tabs>
+      <tab>
+        <name>LINAC-X</name>
+        <children>
+          <widget type="navtabs" version="2.0.0">
+            <name>Navigation Tabs_X1</name>
+            <tabs>
+              <tab>
+                <name>QDX41</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX41</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>DM14</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>DM14</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX1</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX1</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX2</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX2</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX3</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX3</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX4</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX4</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>BM1</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>BM1</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX5</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX5</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX6</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX6</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSX4</name>
+                <file>MSXsub1.bob</file>
+                <macros>
+                  <N>MSX4</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX7</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX7</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX8</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX8</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX9</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX9</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX10</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX10</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+            </tabs>
+            <x>2</x>
+            <y>2</y>
+            <width>760</width>
+            <height>169</height>
+            <direction>0</direction>
+            <tab_width>50</tab_width>
+            <tab_spacing>5</tab_spacing>
+            <selected_color>
+              <color red="204" green="255" blue="255">
+              </color>
+            </selected_color>
+            <deselected_color>
+              <color name="Button_Background" red="210" green="210" blue="210">
+              </color>
+            </deselected_color>
+            <font>
+              <font family="Liberation Mono" style="BOLD" size="16.0">
+              </font>
+            </font>
+            <actions>
+            </actions>
+            <rules>
+              <rule name="New Rule" prop_id="name" out_exp="false">
+              </rule>
+              <rule name="New Rule" prop_id="name" out_exp="false">
+              </rule>
+            </rules>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>HALL 1 &amp; 2 -X</name>
+        <children>
+          <widget type="navtabs" version="2.0.0">
+            <name>Navigation Tabs_X2</name>
+            <tabs>
+              <tab>
+                <name>MSX5</name>
+                <file>MSXsub1.bob</file>
+                <macros>
+                  <N>MSX5</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX10</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX10</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>SWM1</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>SWM1</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSX7</name>
+                <file>MSXsub1.bob</file>
+                <macros>
+                  <N>MSX7</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX11</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX11</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSX8</name>
+                <file>MSXsub1.bob</file>
+                <macros>
+                  <N>MSX8</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX12</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX12</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSX10</name>
+                <file>MSXsub1.bob</file>
+                <macros>
+                  <N>MSX10</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDX13</name>
+                <file>MPSXsub1.bob</file>
+                <macros>
+                  <N>QDX13</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSX11</name>
+                <file>MSXsub1.bob</file>
+                <macros>
+                  <N>MSX11</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>GRPX</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+            </tabs>
+            <x>3</x>
+            <y>3</y>
+            <width>760</width>
+            <height>169</height>
+            <direction>0</direction>
+            <tab_width>50</tab_width>
+            <tab_spacing>5</tab_spacing>
+            <selected_color>
+              <color red="204" green="255" blue="255">
+              </color>
+            </selected_color>
+            <deselected_color>
+              <color name="Button_Background" red="210" green="210" blue="210">
+              </color>
+            </deselected_color>
+            <font>
+              <font family="Liberation Mono" style="BOLD" size="16.0">
+              </font>
+            </font>
+            <actions>
+            </actions>
+            <rules>
+              <rule name="New Rule" prop_id="name" out_exp="false">
+              </rule>
+              <rule name="New Rule" prop_id="name" out_exp="false">
+              </rule>
+            </rules>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>GROUPX</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <x>13</x>
+    <y>458</y>
+    <width>773</width>
+    <height>212</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_74</name>
+    <pv_name>QDY2:ON_CMD</pv_name>
+    <x>275</x>
+    <y>145</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY2:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_106</name>
+    <pv_name>QDY3:i_rd_raw</pv_name>
+    <x>211</x>
+    <y>175</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_75</name>
+    <pv_name>QDY3:ON_CMD</pv_name>
+    <x>275</x>
+    <y>175</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY3:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_20</name>
+    <text>QDY2</text>
+    <x>161</x>
+    <y>145</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_112</name>
+    <pv_name>QDY2:i_rd_raw</pv_name>
+    <x>211</x>
+    <y>145</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_25</name>
+    <pv_name>QDY2:ON_OFF</pv_name>
+    <x>261</x>
+    <y>150</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_24</name>
+    <text>QDY3</text>
+    <x>161</x>
+    <y>175</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_26</name>
+    <pv_name>QDY3:ON_OFF</pv_name>
+    <x>260</x>
+    <y>179</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_25</name>
+    <text>QDY4</text>
+    <x>161</x>
+    <y>232</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_116</name>
+    <pv_name>QDY4:i_rd_raw</pv_name>
+    <x>211</x>
+    <y>232</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_27</name>
+    <pv_name>QDY4:ON_OFF</pv_name>
+    <x>261</x>
+    <y>238</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_80</name>
+    <pv_name>QDY4:ON_CMD</pv_name>
+    <x>275</x>
+    <y>232</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY4:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_26</name>
+    <text>QDX2</text>
+    <x>11</x>
+    <y>145</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_30</name>
+    <pv_name>QDX2:ON_OFF</pv_name>
+    <x>111</x>
+    <y>151</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="MAJOR" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_126</name>
+    <pv_name>QDX2:i_rd_raw</pv_name>
+    <x>59</x>
+    <y>144</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_32</name>
+    <pv_name>QDX2:ON_OFF</pv_name>
+    <x>110</x>
+    <y>151</y>
+    <width>11</width>
+    <height>1</height>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_85</name>
+    <pv_name>QDX2:ON_CMD</pv_name>
+    <x>126</x>
+    <y>146</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX2:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_27</name>
+    <text>QDX3</text>
+    <x>11</x>
+    <y>175</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_128</name>
+    <pv_name>QDX3:i_rd_raw</pv_name>
+    <x>60</x>
+    <y>174</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_33</name>
+    <pv_name>QDX3:ON_OFF</pv_name>
+    <x>110</x>
+    <y>179</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_86</name>
+    <pv_name>QDX3:ON_CMD</pv_name>
+    <x>125</x>
+    <y>175</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX3:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_28</name>
+    <text>QDX4</text>
+    <x>11</x>
+    <y>232</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_130</name>
+    <pv_name>QDX4:i_rd_raw</pv_name>
+    <x>61</x>
+    <y>232</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_34</name>
+    <pv_name>QDX4:ON_OFF</pv_name>
+    <x>110</x>
+    <y>238</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_87</name>
+    <pv_name>QDX4:ON_CMD</pv_name>
+    <x>126</x>
+    <y>232</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX4:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_164</name>
+    <pv_name>QDY6:i_rd_raw</pv_name>
+    <x>213</x>
+    <y>326</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_104</name>
+    <pv_name>QDY6:ON_CMD</pv_name>
+    <x>275</x>
+    <y>326</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY6:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_33</name>
+    <text>QDY5</text>
+    <x>163</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_166</name>
+    <pv_name>QDY5:i_rd_raw</pv_name>
+    <x>213</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_52</name>
+    <pv_name>QDY5:ON_OFF</pv_name>
+    <x>262</x>
+    <y>302</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_105</name>
+    <pv_name>QDY5:ON_CMD</pv_name>
+    <x>275</x>
+    <y>296</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY5:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_34</name>
+    <text>QDY6</text>
+    <x>163</x>
+    <y>326</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_55</name>
+    <pv_name>QDY6:ON_OFF</pv_name>
+    <x>263</x>
+    <y>332</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_35</name>
+    <text>MSY4</text>
+    <x>163</x>
+    <y>356</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_174</name>
+    <pv_name>MSY4:Measure_I</pv_name>
+    <x>213</x>
+    <y>356</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_56</name>
+    <pv_name>MSY4:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>263</x>
+    <y>362</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_109</name>
+    <pv_name>MSY4:SetREVFWD_ONOFF</pv_name>
+    <x>275</x>
+    <y>356</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSY4:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_36</name>
+    <text>QDX5</text>
+    <x>13</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_58</name>
+    <pv_name>QDX6:ON_OFF</pv_name>
+    <x>113</x>
+    <y>332</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_184</name>
+    <pv_name>QDX5:i_rd_raw</pv_name>
+    <x>63</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_61</name>
+    <pv_name>QDX5:ON_OFF</pv_name>
+    <x>112</x>
+    <y>302</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_114</name>
+    <pv_name>QDX5:ON_CMD</pv_name>
+    <x>126</x>
+    <y>298</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX5:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_37</name>
+    <text>QDX6</text>
+    <x>13</x>
+    <y>326</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_186</name>
+    <pv_name>QDX6:i_rd_raw</pv_name>
+    <x>63</x>
+    <y>328</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_115</name>
+    <pv_name>QDX6:ON_CMD</pv_name>
+    <x>126</x>
+    <y>328</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX6:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_38</name>
+    <text>MSX4</text>
+    <x>13</x>
+    <y>356</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_188</name>
+    <pv_name>MSX4:Measure_I</pv_name>
+    <x>63</x>
+    <y>356</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_63</name>
+    <pv_name>MSX4:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>112</x>
+    <y>362</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="255" green="255" blue="0">
+      </color>
+    </on_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_116</name>
+    <pv_name>MSX4:SetREVFWD_ONOFF</pv_name>
+    <x>126</x>
+    <y>356</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSX4:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_190</name>
+    <pv_name>BM1:i_rd_raw</pv_name>
+    <x>61</x>
+    <y>205</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_64</name>
+    <pv_name>BM1:ON_OFF</pv_name>
+    <x>110</x>
+    <y>211</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_117</name>
+    <pv_name>BM1:ON_CMD</pv_name>
+    <x>126</x>
+    <y>205</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>BM1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_39</name>
+    <text>BM2</text>
+    <x>10</x>
+    <y>263</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_192</name>
+    <pv_name>BM2:i_rd_raw</pv_name>
+    <x>63</x>
+    <y>263</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_65</name>
+    <pv_name>BM2:ON_OFF</pv_name>
+    <x>113</x>
+    <y>269</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_118</name>
+    <pv_name>BM2:ON_CMD</pv_name>
+    <x>127</x>
+    <y>263</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>BM2:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_40</name>
+    <text>BM1</text>
+    <x>8</x>
+    <y>205</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_41</name>
+    <text>QDY8</text>
+    <x>163</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_42</name>
+    <text>QDY9</text>
+    <x>481</x>
+    <y>86</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_204</name>
+    <pv_name>QDY9:i_rd_raw</pv_name>
+    <x>531</x>
+    <y>86</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_71</name>
+    <pv_name>QDY9:ON_OFF</pv_name>
+    <x>581</x>
+    <y>93</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_124</name>
+    <pv_name>QDY9:ON_CMD</pv_name>
+    <x>601</x>
+    <y>86</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY9:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_43</name>
+    <text>QDX8</text>
+    <x>13</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_214</name>
+    <pv_name>QDX8:i_rd_raw</pv_name>
+    <x>63</x>
+    <y>415</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_77</name>
+    <pv_name>QDX8:ON_OFF</pv_name>
+    <x>112</x>
+    <y>422</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_129</name>
+    <pv_name>QDX8:ON_CMD</pv_name>
+    <x>126</x>
+    <y>416</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX8:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_44</name>
+    <text>QDX9</text>
+    <x>321</x>
+    <y>86</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_216</name>
+    <pv_name>QDX9:i_rd_raw</pv_name>
+    <x>371</x>
+    <y>85</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_78</name>
+    <pv_name>QDX9:ON_OFF</pv_name>
+    <x>421</x>
+    <y>90</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_130</name>
+    <pv_name>QDX9:ON_CMD</pv_name>
+    <x>443</x>
+    <y>86</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX9:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_220</name>
+    <pv_name>QDX7:i_rd_raw</pv_name>
+    <x>63</x>
+    <y>386</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_80</name>
+    <pv_name>QDX7:ON_OFF</pv_name>
+    <x>112</x>
+    <y>392</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_132</name>
+    <pv_name>QDX7:ON_CMD</pv_name>
+    <x>126</x>
+    <y>386</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX7:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_46</name>
+    <text>QDY7</text>
+    <x>163</x>
+    <y>386</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_222</name>
+    <pv_name>QDY7:i_rd_raw</pv_name>
+    <x>213</x>
+    <y>386</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_81</name>
+    <pv_name>QDY7:ON_OFF</pv_name>
+    <x>263</x>
+    <y>392</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_133</name>
+    <pv_name>QDY7:ON_CMD</pv_name>
+    <x>275</x>
+    <y>386</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY7:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_224</name>
+    <pv_name>QDY8:i_rd_raw</pv_name>
+    <x>213</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_82</name>
+    <pv_name>QDY8:ON_OFF</pv_name>
+    <x>261</x>
+    <y>422</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_134</name>
+    <pv_name>QDY8:ON_CMD</pv_name>
+    <x>275</x>
+    <y>416</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY8:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_47</name>
+    <text>QDX7</text>
+    <x>13</x>
+    <y>386</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_48</name>
+    <text>MSY5</text>
+    <x>481</x>
+    <y>116</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_226</name>
+    <pv_name>MSY5:Measure_I</pv_name>
+    <x>531</x>
+    <y>116</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_83</name>
+    <pv_name>MSY5:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>581</x>
+    <y>123</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_135</name>
+    <pv_name>MSY5:SetREVFWD_ONOFF</pv_name>
+    <x>601</x>
+    <y>116</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSY5:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_49</name>
+    <text>MSX5</text>
+    <x>321</x>
+    <y>116</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_228</name>
+    <pv_name>MSX5:Measure_I</pv_name>
+    <x>370</x>
+    <y>116</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_84</name>
+    <pv_name>MSX5:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>423</x>
+    <y>122</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>SetONOFF_MSX5</name>
+    <pv_name>MSX5:SetREVFWD_ONOFF</pv_name>
+    <x>443</x>
+    <y>116</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSX5:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_137</name>
+    <pv_name>MSY7:SetREVFWD_ONOFF</pv_name>
+    <x>601</x>
+    <y>206</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSY7:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_51</name>
+    <text>MSY7</text>
+    <x>481</x>
+    <y>206</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_238</name>
+    <pv_name>MSY7:Measure_I</pv_name>
+    <x>531</x>
+    <y>206</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_89</name>
+    <pv_name>MSY7:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>581</x>
+    <y>213</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_52</name>
+    <text>SWM1</text>
+    <x>321</x>
+    <y>176</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_248</name>
+    <pv_name>SWM1:i_rd_raw</pv_name>
+    <x>370</x>
+    <y>176</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_53</name>
+    <text>MSX7</text>
+    <x>321</x>
+    <y>206</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_250</name>
+    <pv_name>MSX7:Measure_I</pv_name>
+    <x>370</x>
+    <y>206</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_95</name>
+    <pv_name>MSX7:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>423</x>
+    <y>212</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_147</name>
+    <pv_name>MSX7:SetREVFWD_ONOFF</pv_name>
+    <x>443</x>
+    <y>206</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSX7:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_252</name>
+    <pv_name>QDX10:i_rd_raw</pv_name>
+    <x>370</x>
+    <y>146</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_96</name>
+    <pv_name>QDX10:ON_OFF</pv_name>
+    <x>423</x>
+    <y>152</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>SetONOFF_QD10X</name>
+    <pv_name>QDX10:ON_CMD</pv_name>
+    <x>443</x>
+    <y>146</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX10:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_54</name>
+    <text>QDY10</text>
+    <x>481</x>
+    <y>146</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_254</name>
+    <pv_name>QDY10:i_rd_raw</pv_name>
+    <x>531</x>
+    <y>146</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_97</name>
+    <pv_name>QDY10:ON_OFF</pv_name>
+    <x>581</x>
+    <y>153</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>SetONOFF_QD10Y</name>
+    <pv_name>QDY10:ON_CMD</pv_name>
+    <x>601</x>
+    <y>146</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY10:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_55</name>
+    <text>QDX10</text>
+    <x>321</x>
+    <y>146</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_45</name>
+    <text>QDY11</text>
+    <x>481</x>
+    <y>234</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_57</name>
+    <text>QDX11</text>
+    <x>321</x>
+    <y>236</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_274</name>
+    <pv_name>QDX11:i_rd_raw</pv_name>
+    <x>370</x>
+    <y>236</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_106</name>
+    <pv_name>QDX11:ON_OFF</pv_name>
+    <x>423</x>
+    <y>242</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_159</name>
+    <pv_name>QDX11:ON_CMD</pv_name>
+    <x>443</x>
+    <y>234</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX11:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_278</name>
+    <pv_name>QDY11:i_rd_raw</pv_name>
+    <x>531</x>
+    <y>234</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_110</name>
+    <pv_name>QDY11:ON_OFF</pv_name>
+    <x>581</x>
+    <y>243</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_161</name>
+    <pv_name>QDY11:ON_CMD</pv_name>
+    <x>601</x>
+    <y>236</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY11:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_59</name>
+    <text>SWM2</text>
+    <x>321</x>
+    <y>326</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_280</name>
+    <pv_name>SWM2:i_rd_raw</pv_name>
+    <x>370</x>
+    <y>326</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_111</name>
+    <pv_name>SWM2:ON_OFF</pv_name>
+    <x>423</x>
+    <y>332</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_162</name>
+    <pv_name>SWM2:ON_CMD</pv_name>
+    <x>443</x>
+    <y>326</y>
+    <width>19</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>SWM2:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_61</name>
+    <text>QDY12</text>
+    <x>481</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_62</name>
+    <text>MSY10</text>
+    <x>481</x>
+    <y>357</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_292</name>
+    <pv_name>MSY10:Measure_I</pv_name>
+    <x>531</x>
+    <y>357</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_117</name>
+    <pv_name>MSY10:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>581</x>
+    <y>364</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_168</name>
+    <pv_name>MSY10:SetREVFWD_ONOFF</pv_name>
+    <x>601</x>
+    <y>357</y>
+    <width>19</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSY10:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_63</name>
+    <text>QDX12</text>
+    <x>321</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_302</name>
+    <pv_name>QDX12:i_rd_raw</pv_name>
+    <x>370</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_122</name>
+    <pv_name>QDX12:ON_OFF</pv_name>
+    <x>423</x>
+    <y>302</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_173</name>
+    <pv_name>QDX12:ON_CMD</pv_name>
+    <x>443</x>
+    <y>296</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX12:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_64</name>
+    <text>MSX10</text>
+    <x>321</x>
+    <y>356</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_304</name>
+    <pv_name>MSX10:Measure_I</pv_name>
+    <x>370</x>
+    <y>356</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_123</name>
+    <pv_name>MSX10:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>423</x>
+    <y>362</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_174</name>
+    <pv_name>MSX10:SetREVFWD_ONOFF</pv_name>
+    <x>443</x>
+    <y>356</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSX10:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_306</name>
+    <pv_name>MSX8:Measure_I</pv_name>
+    <x>373</x>
+    <y>263</y>
+    <width>47</width>
+    <height>15</height>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_124</name>
+    <pv_name>MSX8:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>423</x>
+    <y>269</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_175</name>
+    <pv_name>MSX8:SetREVFWD_ONOFF</pv_name>
+    <x>443</x>
+    <y>263</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSX8:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_65</name>
+    <text>MSY8</text>
+    <x>481</x>
+    <y>263</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_308</name>
+    <pv_name>MSY8:Measure_I</pv_name>
+    <x>531</x>
+    <y>263</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_125</name>
+    <pv_name>MSY8:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>581</x>
+    <y>270</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_176</name>
+    <pv_name>MSY8:SetREVFWD_ONOFF</pv_name>
+    <x>602</x>
+    <y>263</y>
+    <width>19</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSY8:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_310</name>
+    <pv_name>QDY12:i_rd_raw</pv_name>
+    <x>531</x>
+    <y>296</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_126</name>
+    <pv_name>QDY12:ON_OFF</pv_name>
+    <x>581</x>
+    <y>303</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_177</name>
+    <pv_name>QDY12:ON_CMD</pv_name>
+    <x>602</x>
+    <y>296</y>
+    <width>19</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY12:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_66</name>
+    <text>MSX8</text>
+    <x>321</x>
+    <y>263</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_67</name>
+    <text>QDY13</text>
+    <x>481</x>
+    <y>387</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_68</name>
+    <text>MSY11</text>
+    <x>481</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_320</name>
+    <pv_name>MSY11:Measure_I</pv_name>
+    <x>531</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_131</name>
+    <pv_name>MSY11:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>581</x>
+    <y>423</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_182</name>
+    <pv_name>MSY11:SetREVFWD_ONOFF</pv_name>
+    <x>601</x>
+    <y>416</y>
+    <width>19</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSY11:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_69</name>
+    <text>QDX13</text>
+    <x>321</x>
+    <y>386</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_330</name>
+    <pv_name>QDX13:i_rd_raw</pv_name>
+    <x>370</x>
+    <y>386</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_136</name>
+    <pv_name>QDX13:ON_OFF</pv_name>
+    <x>423</x>
+    <y>392</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_187</name>
+    <pv_name>QDX13:ON_CMD</pv_name>
+    <x>443</x>
+    <y>386</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDX13:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_70</name>
+    <text>MSX11</text>
+    <x>321</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_332</name>
+    <pv_name>MSX11:Measure_I</pv_name>
+    <x>370</x>
+    <y>416</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>2</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_137</name>
+    <pv_name>MSX11:GetDI__NUM_REVFWD.B6</pv_name>
+    <x>423</x>
+    <y>422</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </off_color>
+    <on_color>
+      <color name="ActiveText" red="255" green="255" blue="0">
+      </color>
+    </on_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_188</name>
+    <pv_name>MSX11:SetREVFWD_ONOFF</pv_name>
+    <x>443</x>
+    <y>416</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>R</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>F</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>MSX11:SetREVFWD_ONOFF</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_334</name>
+    <pv_name>QDY13:i_rd_raw</pv_name>
+    <x>531</x>
+    <y>387</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+    <foreground_color>
+      <color red="0" green="0" blue="255">
+      </color>
+    </foreground_color>
+    <background_color>
+      <color name="Button_Background" red="210" green="210" blue="210">
+      </color>
+    </background_color>
+    <format>1</format>
+    <precision>0</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_138</name>
+    <pv_name>QDY13:ON_OFF</pv_name>
+    <x>581</x>
+    <y>394</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_189</name>
+    <pv_name>QDY13:ON_CMD</pv_name>
+    <x>601</x>
+    <y>387</y>
+    <width>19</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>QDY13:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="tabs" version="2.0.0">
+    <name>Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>LINAC -Y</name>
+        <children>
+          <widget type="navtabs" version="2.0.0">
+            <name>Navigation Tabs_Y1</name>
+            <tabs>
+              <tab>
+                <name>QDY41</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY41</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>-</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY1</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY1</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY2</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY2</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY3</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY3</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY4</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY4</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>BM2</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>BM2</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY5</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY5</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY6</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY6</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSY4</name>
+                <file>MSYsub1.bob</file>
+                <macros>
+                  <N>MSY4</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY7</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY7</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY8</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY8</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY9</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY9</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY10</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY10</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+            </tabs>
+            <x>2</x>
+            <y>1</y>
+            <width>760</width>
+            <height>169</height>
+            <direction>0</direction>
+            <tab_width>50</tab_width>
+            <tab_spacing>5</tab_spacing>
+            <selected_color>
+              <color red="204" green="255" blue="255">
+              </color>
+            </selected_color>
+            <font>
+              <font family="Liberation Mono" style="BOLD" size="16.0">
+              </font>
+            </font>
+            <actions>
+            </actions>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>HALL1 &amp; 2 -Y</name>
+        <children>
+          <widget type="navtabs" version="2.0.0">
+            <name>Navigation Tabs_Y2</name>
+            <tabs>
+              <tab>
+                <name>MSY5</name>
+                <file>MSYsub1.bob</file>
+                <macros>
+                  <N>MSY5</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY10</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY10</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>SWM2</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>SWM2</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSY7</name>
+                <file>MSYsub1.bob</file>
+                <macros>
+                  <N>MSY7</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY11</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY11</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSY8</name>
+                <file>MSYsub1.bob</file>
+                <macros>
+                  <N>MSY8</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY12</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY12</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSY10</name>
+                <file>MSYsub1.bob</file>
+                <macros>
+                  <N>MSY10</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>QDY13</name>
+                <file>MPSYsub1.bob</file>
+                <macros>
+                  <N>QDY13</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>MSY11</name>
+                <file>MSYsub1.bob</file>
+                <macros>
+                  <N>MSY11</N>
+                </macros>
+                <group_name></group_name>
+              </tab>
+              <tab>
+                <name>GRPY</name>
+                <file></file>
+                <macros>
+                </macros>
+                <group_name></group_name>
+              </tab>
+            </tabs>
+            <x>3</x>
+            <y>1</y>
+            <width>760</width>
+            <height>169</height>
+            <direction>0</direction>
+            <tab_width>50</tab_width>
+            <tab_spacing>5</tab_spacing>
+            <selected_color>
+              <color red="204" green="255" blue="255">
+              </color>
+            </selected_color>
+            <deselected_color>
+              <color name="Button_Background" red="210" green="210" blue="210">
+              </color>
+            </deselected_color>
+            <font>
+              <font family="Liberation Mono" style="BOLD" size="16.0">
+              </font>
+            </font>
+            <actions>
+            </actions>
+            <rules>
+              <rule name="New Rule" prop_id="name" out_exp="false">
+              </rule>
+              <rule name="New Rule" prop_id="name" out_exp="false">
+              </rule>
+            </rules>
+          </widget>
+        </children>
+      </tab>
+      <tab>
+        <name>GROUPY</name>
+        <children>
+        </children>
+      </tab>
+    </tabs>
+    <x>11</x>
+    <y>679</y>
+    <width>773</width>
+    <height>211</height>
+    <font>
+      <font name="Default Bold" family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update</name>
+    <x>1160</x>
+    <y>670</y>
+    <width>10</width>
+    <height>1</height>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_16</name>
+    <text>QDX41</text>
+    <x>9</x>
+    <y>55</y>
+    <width>50</width>
+    <font>
+      <font family="Liberation Sans" style="BOLD" size="14.0">
+      </font>
+    </font>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>loc://onoff</pv_name>
+        <value>1</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <rules>
+      <rule name="New Rule" prop_id="name" out_exp="false">
+      </rule>
+    </rules>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>Text Symbol</name>
+    <x>677</x>
+    <y>172</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="meter" version="3.0.0">
+    <name>Meter</name>
+    <x>695</x>
+    <y>390</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_112</name>
+    <pv_name>SWM1:ON_OFF</pv_name>
+    <x>423</x>
+    <y>181</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Set _dir_163</name>
+    <pv_name>SWM1:ON_CMD</pv_name>
+    <x>443</x>
+    <y>178</y>
+    <width>20</width>
+    <height>20</height>
+    <off_label>OFF</off_label>
+    <off_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </off_color>
+    <off_image>OFF</off_image>
+    <on_label>ON</on_label>
+    <on_color>
+      <color name="Grid" red="128" green="128" blue="128">
+      </color>
+    </on_color>
+    <show_led>false</show_led>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <actions execute_as_one="true">
+      <action type="write_pv">
+        <pv_name>SWM1:ON_CMD</pv_name>
+        <value>0</value>
+        <description>WritePV</description>
+      </action>
+    </actions>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+  </widget>
+  <widget type="led" version="2.0.0">
+    <name>LED_16</name>
+    <pv_name>QDX41:ON_OFF</pv_name>
+    <x>111</x>
+    <y>61</y>
+    <width>11</width>
+    <height>10</height>
+    <off_color>
+      <color name="STOP" red="255" green="0" blue="0">
+      </color>
+    </off_color>
+    <rules>
+      <rule name="New Rule" prop_id="off_color" out_exp="false">
+        <pv_name>$(pv_name)</pv_name>
+      </rule>
+    </rules>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_58</name>
+    <pv_name>Testla1:Measure_Testla</pv_name>
+    <x>161</x>
+    <y>205</y>
+    <width>102</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>5</format>
+    <precision>6</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_61</name>
+    <pv_name>Testla2:Measure_Testla</pv_name>
+    <x>161</x>
+    <y>263</y>
+    <width>102</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>5</format>
+    <precision>6</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_63</name>
+    <pv_name>Testla3:Measure_Testla</pv_name>
+    <x>481</x>
+    <y>178</y>
+    <width>102</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>5</format>
+    <precision>6</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_64</name>
+    <pv_name>Testla4:Measure_Testla</pv_name>
+    <x>481</x>
+    <y>326</y>
+    <width>102</width>
+    <height>24</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="16.0">
+      </font>
+    </font>
+    <background_color>
+      <color name="Write_Background" red="128" green="255" blue="255">
+      </color>
+    </background_color>
+    <format>5</format>
+    <precision>6</precision>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="meter" version="3.0.0">
+    <name>Meter_1</name>
+    <x>940</x>
+    <y>299</y>
+    <width>1</width>
+    <height>1</height>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_9</name>
+    <pv_name>F1:Limit_6Ch</pv_name>
+    <x>1071</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_10</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:6SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:6SetINOUT</pv_name>
+    <x>1066</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_11</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:6SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:6SetINOUT</pv_name>
+    <x>1066</x>
+    <y>509</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_10</name>
+    <pv_name>F1:Limit_7Ch</pv_name>
+    <x>1112</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_12</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:7SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:7SetINOUT</pv_name>
+    <x>1107</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_13</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:7SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:7SetINOUT</pv_name>
+    <x>1107</x>
+    <y>509</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_11</name>
+    <pv_name>F1:Limit_8Ch</pv_name>
+    <x>1153</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label>3</fallback_label>
+    <fallback_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_14</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:8SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:8SetINOUT</pv_name>
+    <x>1148</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_15</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:8SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:8SetINOUT</pv_name>
+    <x>1148</x>
+    <y>509</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC1</name>
+    <symbols>
+      <symbol>FC1</symbol>
+    </symbols>
+    <x>860</x>
+    <y>410</y>
+    <width>38</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>FC1_1</name>
+    <pv_name>F1:Limit_1Ch</pv_name>
+    <x>866</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_22</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:1SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:1SetINOUT</pv_name>
+    <x>861</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_23</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:1SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:1SetINOUT</pv_name>
+    <x>861</x>
+    <y>511</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2</name>
+    <symbols>
+      <symbol>FC2</symbol>
+    </symbols>
+    <x>903</x>
+    <y>410</y>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_15</name>
+    <pv_name>F1:Limit_2Ch</pv_name>
+    <x>907</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_24</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:2SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:2SetINOUT</pv_name>
+    <x>902</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_25</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:2SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:2SetINOUT</pv_name>
+    <x>902</x>
+    <y>511</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_16</name>
+    <pv_name>F1:Limit_3Ch</pv_name>
+    <x>948</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_26</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:3SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:3SetINOUT</pv_name>
+    <x>943</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_27</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:3SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:3SetINOUT</pv_name>
+    <x>943</x>
+    <y>510</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_17</name>
+    <pv_name>F1:Limit_4Ch</pv_name>
+    <x>989</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_28</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:4SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:4SetINOUT</pv_name>
+    <x>984</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_29</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:4SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:4SetINOUT</pv_name>
+    <x>984</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_18</name>
+    <pv_name>F1:Limit_5Ch</pv_name>
+    <x>1030</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_30</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:5SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F1:5SetINOUT</pv_name>
+    <x>1025</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_31</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F1:5SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F1:5SetINOUT</pv_name>
+    <x>1025</x>
+    <y>509</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_19</name>
+    <pv_name>F2:Limit_4Ch</pv_name>
+    <x>1317</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_32</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:4SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F2:4SetINOUT</pv_name>
+    <x>1312</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_33</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:4SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F2:4SetINOUT</pv_name>
+    <x>1312</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_20</name>
+    <pv_name>F2:Limit_5Ch</pv_name>
+    <x>1358</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_34</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:5SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F2:5SetINOUT</pv_name>
+    <x>1353</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_35</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:5SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F2:5SetINOUT</pv_name>
+    <x>1353</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_21</name>
+    <pv_name>F2:Limit_6Ch</pv_name>
+    <x>1399</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+    <fallback_color>
+      <color name="On" red="0" green="255" blue="0">
+      </color>
+    </fallback_color>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_36</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:6SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F2:6SetINOUT</pv_name>
+    <x>1394</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_37</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:6SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F2:6SetINOUT</pv_name>
+    <x>1394</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_22</name>
+    <pv_name>F2:Limit_1Ch</pv_name>
+    <x>1194</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_38</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:1SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F2:1SetINOUT</pv_name>
+    <x>1189</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_39</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:1SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F2:1SetINOUT</pv_name>
+    <x>1189</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_23</name>
+    <pv_name>F2:Limit_2Ch</pv_name>
+    <x>1235</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_40</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:2SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F2:2SetINOUT</pv_name>
+    <x>1230</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_41</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:2SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F2:2SetINOUT</pv_name>
+    <x>1230</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="multi_state_led" version="2.0.0">
+    <name>LED (Multi State)_24</name>
+    <pv_name>F2:Limit_3Ch</pv_name>
+    <x>1276</x>
+    <y>434</y>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="8.0">
+      </font>
+    </font>
+    <states>
+      <state>
+        <value>0</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>1</value>
+        <label></label>
+        <color>
+          <color name="On" red="0" green="255" blue="0">
+          </color>
+        </color>
+      </state>
+      <state>
+        <value>2</value>
+        <label></label>
+        <color>
+          <color name="MAJOR" red="255" green="0" blue="0">
+          </color>
+        </color>
+      </state>
+    </states>
+    <fallback_label></fallback_label>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_42</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:3SetINOUT</pv_name>
+        <value>1</value>
+        <description>I</description>
+      </action>
+    </actions>
+    <pv_name>F2:3SetINOUT</pv_name>
+    <x>1271</x>
+    <y>465</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="action_button" version="3.0.0">
+    <name>Action Button_43</name>
+    <actions>
+      <action type="write_pv">
+        <pv_name>F2:3SetINOUT</pv_name>
+        <value>0</value>
+        <description>O</description>
+      </action>
+    </actions>
+    <pv_name>F2:3SetINOUT</pv_name>
+    <x>1271</x>
+    <y>508</y>
+    <width>30</width>
+    <background_color>
+      <color name="Read_Background" red="240" green="240" blue="240">
+      </color>
+    </background_color>
+    <tooltip>$(actions)</tooltip>
+  </widget>
+  <widget type="bool_button" version="2.0.0">
+    <name>Boolean Button</name>
+    <x>1604</x>
+    <y>312</y>
+    <width>0</width>
+    <height>0</height>
+  </widget>
+  <widget type="textupdate" version="2.0.0">
+    <name>Text Update_1</name>
+    <x>1146</x>
+    <y>632</y>
+    <width>10</width>
+    <height>1</height>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>Radio Button_9</name>
+    <pv_name>BPM:Select2</pv_name>
+    <x>869</x>
+    <y>751</y>
+    <width>620</width>
+    <height>40</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="11.0">
+      </font>
+    </font>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+    </items>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_2</name>
+    <pv_name>BPM:Select2_rd</pv_name>
+    <x>863</x>
+    <y>702</y>
+    <width>620</width>
+    <height>30</height>
+    <selected_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="choice" version="2.0.0">
+    <name>Choice Button_3</name>
+    <pv_name>BPM:Select1_rd</pv_name>
+    <x>863</x>
+    <y>628</y>
+    <width>620</width>
+    <height>30</height>
+    <selected_color>
+      <color name="OK" red="0" green="255" blue="0">
+      </color>
+    </selected_color>
+    <items>
+      <item>Item 1</item>
+      <item>Item 2</item>
+    </items>
+  </widget>
+  <widget type="radio" version="2.0.0">
+    <name>Radio Button_10</name>
+    <pv_name>BPM:Select1</pv_name>
+    <x>863</x>
+    <y>666</y>
+    <width>620</width>
+    <height>40</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="11.0">
+      </font>
+    </font>
+    <border_alarm_sensitive>false</border_alarm_sensitive>
+    <items>
+      <item>1</item>
+      <item>2</item>
+      <item>3</item>
+      <item>4</item>
+      <item>5</item>
+      <item>6</item>
+    </items>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_1</name>
+    <text>BPM</text>
+    <x>1134</x>
+    <y>587</y>
+    <width>63</width>
+    <height>27</height>
+    <font>
+      <font family="Liberation Sans" style="REGULAR" size="24.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_2</name>
+    <text>Sel 1</text>
+    <x>817</x>
+    <y>668</y>
+    <width>38</width>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_3</name>
+    <text>Sel 2</text>
+    <x>823</x>
+    <y>750</y>
+    <width>36</width>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>Spinner_3</name>
+    <pv_name>BPM:Gain1</pv_name>
+    <x>1490</x>
+    <y>631</y>
+    <width>84</width>
+    <height>27</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="spinner" version="2.0.0">
+    <name>Spinner_4</name>
+    <pv_name>BPM:Gain2</pv_name>
+    <x>1490</x>
+    <y>704</y>
+    <width>84</width>
+    <height>24</height>
+    <horizontal_alignment>1</horizontal_alignment>
+    <vertical_alignment>1</vertical_alignment>
+  </widget>
+  <widget type="label" version="2.0.0">
+    <name>Label_4</name>
+    <text>Gain</text>
+    <x>1506</x>
+    <y>608</y>
+    <width>59</width>
+  </widget>
+  <widget type="navtabs" version="2.0.0">
+    <name>Navigation Tabs_1</name>
+    <tabs>
+      <tab>
+        <name>U1</name>
+        <file>F1.bob</file>
+        <macros>
+          <N>F1</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+      <tab>
+        <name>U2</name>
+        <file>F2.bob</file>
+        <macros>
+          <N>F2</N>
+        </macros>
+        <group_name></group_name>
+      </tab>
+    </tabs>
+    <x>854</x>
+    <y>23</y>
+    <width>618</width>
+    <height>391</height>
+    <direction>0</direction>
+    <selected_color>
+      <color red="0" green="255" blue="255">
+      </color>
+    </selected_color>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_1</name>
+    <symbols>
+      <symbol>FC3</symbol>
+    </symbols>
+    <x>940</x>
+    <y>410</y>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC1_2</name>
+    <symbols>
+      <symbol>FC4</symbol>
+    </symbols>
+    <x>977</x>
+    <y>410</y>
+    <width>38</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_2</name>
+    <symbols>
+      <symbol>FC5</symbol>
+    </symbols>
+    <x>1022</x>
+    <y>410</y>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_3</name>
+    <symbols>
+      <symbol>FC6</symbol>
+    </symbols>
+    <x>1068</x>
+    <y>410</y>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_4</name>
+    <symbols>
+      <symbol>FC7</symbol>
+    </symbols>
+    <x>1105</x>
+    <y>410</y>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC1_3</name>
+    <symbols>
+      <symbol>FC8</symbol>
+    </symbols>
+    <x>1142</x>
+    <y>410</y>
+    <width>38</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_5</name>
+    <symbols>
+      <symbol>FC5</symbol>
+    </symbols>
+    <x>1187</x>
+    <y>410</y>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_10</name>
+    <symbols>
+      <symbol>FC10</symbol>
+    </symbols>
+    <x>1227</x>
+    <y>410</y>
+    <width>35</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_11</name>
+    <symbols>
+      <symbol>FC11</symbol>
+    </symbols>
+    <x>1270</x>
+    <y>410</y>
+    <width>36</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_12</name>
+    <symbols>
+      <symbol>FC12</symbol>
+    </symbols>
+    <x>1309</x>
+    <y>410</y>
+    <width>36</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC1_5</name>
+    <symbols>
+      <symbol>FC13</symbol>
+    </symbols>
+    <x>1347</x>
+    <y>410</y>
+    <width>40</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+  <widget type="text-symbol" version="2.0.0">
+    <name>FC2_13</name>
+    <symbols>
+      <symbol>FC14</symbol>
+    </symbols>
+    <x>1395</x>
+    <y>410</y>
+    <width>35</width>
+    <height>22</height>
+    <font>
+      <font family="Noto Mono" style="REGULAR" size="14.0">
+      </font>
+    </font>
+  </widget>
+</display>

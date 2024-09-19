@@ -1,6 +1,6 @@
-# autosave R5.3	Automatically generated - DO NOT MODIFY - 240729-174220
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 240918-114423
 QDX1:ON_CMD 0
-QDX1:SetI_con 200000
+QDX1:SetI_con 20000
 QDX1:ON_CMD_Restore 0
 QDX1:SetI_con_Restore 0
 QDY1:ON_CMD 0
