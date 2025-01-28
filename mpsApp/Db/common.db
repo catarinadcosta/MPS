@@ -9,3 +9,358 @@ record(mbbo, $(USER):Set_Range)
   field (ONST,"200")
   field (TWST,"1000")
 }
+record(mbbo, All:Set_Ranges)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Ranges")
+  field (ZRVL,"10")
+  field (ONVL,"200")
+  field (TWVL,"1000")
+  field (ZRST,"10")
+  field (ONST,"200")
+  field (TWST,"1000")
+}
+
+
+record(mbbo, All:Set_Slider)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_MinVAlue")
+  field (ZRVL,"0")
+  field (ONVL,"20000")
+  field (TWVL,"10000")
+  field (ZRST,"30000")
+  field (ONST,"40000")
+  field (TWST,"999999")
+}
+record(mbbo, All:Set_Slider_X)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_Max-X")
+  field (ZRVL,"0")
+  field (ONVL,"100000")
+  field (TWVL,"200000")
+  field (THVL,"300000")
+  field (FRVL,"400000")
+  field (FVVL,"0")
+  field (ZRST,"99999")
+  field (ONST,"199999")
+  field (TWST,"299999")
+  field (THST,"399999")
+  field (FRST,"499999")
+  field (FVST,"999999")
+  field(FLNK,"All:Make_Min")
+  field(PINI,"YES")
+}
+record(mbbo, All:Set_Slider_Y)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_Max-Y")
+  field (ZRVL,"0")
+  field (ONVL,"100000")
+  field (TWVL,"200000")
+  field (THVL,"300000")
+  field (FRVL,"400000")
+  field (FVVL,"0")
+  field (ZRST,"99999")
+  field (ONST,"199999")
+  field (TWST,"299999")
+  field (THST,"399999")
+  field (FRST,"499999")
+  field (FVST,"999999")
+  field(FLNK,"All:Make_Min")
+  field(PINI,"YES")
+}
+record(calcout,All:Make_Min)
+{
+field(CALC,"A")
+field(INPA,"All:Set_Slider_Max.VAL")
+field(OUT,"All:Set_Slider_Min PP")
+}
+
+
+record(mbbo, All:Set_Slider_Min)
+{
+  #field (DTYP, "Raw Soft Channel")
+  field (DESC, "Set Slider_MaxVAlue")
+  field (ZRVL,"0")
+  field (ZRST,"0")
+  field (ONST,"200000")
+  field (TWST,"0")
+}
+# record(ao, All:GroupX) {
+#       field(DESC, "Group X quadruople")
+#       field (DRVL, "0")
+#       field (DRVH, "999999")
+#       field (FLNK, "All:GroupX_chk")
+#   }
+# record(fanout, All:GroupX_chk) {
+#     field(LNK1, "All:GroupX_1")
+#     field(LNK2, "All:GroupX_2")
+#     field(LNK3, "All:GroupX_3")
+#     field(LNK4, "All:GroupX_4")
+#     field(LNK5, "All:GroupX_5")
+#     field(LNK6, "All:GroupX_6")
+#     field(LNK7, "All:GroupX_7")
+#     field(LNK8, "All:GroupX_8")
+# }
+
+# record(bo, All:Set_Gp1X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp2X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp3X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp4X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp5X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp6X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp7X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp8X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(calcout, All:GroupX_1) {
+#     field(DESC, "test gp1X1 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp1X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX1:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupX_2) {
+#     field(DESC, "test gp1X2 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp2X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX2:SetI_con CP MS")
+#  }
+#  record(calcout, All:GroupX_3) {
+#     field(DESC, "test gp1X3 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp3X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX3:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupX_4) {
+#     field(DESC, "test gp1X4 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp4X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX4:SetI_con CP MS")
+#  }
+#  record(calcout, All:GroupX_5) {
+#     field(DESC, "test gp1X5 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp5X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX7:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupX_6) {
+#     field(DESC, "test gp1X6 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp6X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX8:SetI_con CP MS")
+#  }
+#  record(calcout, All:GroupX_7) {
+#     field(DESC, "test gp1X7 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp7X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX9:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupX_8) {
+#     field(DESC, "test gp1X8 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp8X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX10:SetI_con CP MS")
+#  }
+
+#  #----Y side
+#  record(ao, All:GroupY) {
+#       field(DESC, "Group XY quadruople")
+#       field (DRVL, "0")
+#       field (DRVH, "999999")
+#       field (FLNK, "All:GroupY_chk")
+#   }
+# record(fanout, All:GroupY_chk) {
+#     field(LNK1, "All:GroupY_1")
+#     field(LNK2, "All:GroupY_2")
+#     field(LNK3, "All:GroupY_3")
+#     field(LNK4, "All:GroupY_4")
+#     field(LNK5, "All:GroupY_5")
+#     field(LNK6, "All:GroupY_6")
+#     field(LNK7, "All:GroupY_7")
+#     field(LNK8, "All:GroupY_8")
+# }
+
+# record(bo, All:Set_Gp1Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp2Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp3Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp4Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp5Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp6Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp7Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp8Y)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(calcout, All:GroupY_1) {
+#     field(DESC, "test gp1Y1 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp1Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY1:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupY_2) {
+#     field(DESC, "test gp1Y2 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp2Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY2:SetI_con CP MS")
+#  }
+#  record(calcout, All:GroupY_3) {
+#     field(DESC, "test gp1Y3 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp3Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY3:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupY_4) {
+#     field(DESC, "test gp1Y4 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp4Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY4:SetI_con CP MS")
+#  }
+#  record(calcout, All:GroupY_5) {
+#     field(DESC, "test gp1Y5 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp5Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY7:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupY_6) {
+#     field(DESC, "test gp1Y6 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp6Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY8:SetI_con CP MS")
+#  }
+#  record(calcout, All:GroupY_7) {
+#     field(DESC, "test gp1Y7 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp7Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY9:SetI_con CP MS")
+#  }
+# record(calcout, All:GroupY_8) {
+#     field(DESC, "test gp1Y8 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp8Y.RVAL ")
+#     field(INPB, "All:GroupY.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDY10:SetI_con CP MS")
+#  }

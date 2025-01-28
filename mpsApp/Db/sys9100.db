@@ -356,86 +356,170 @@ record (ao, $(USER):SetI_con)
   #field (OOPT, "Every Time")
   field (ADEL, "1")
  }   
-
-record(mbbo, All:Set_Ranges)
-{
-  #field (DTYP, "Raw Soft Channel")
-  field (DESC, "Set Ranges")
-  field (ZRVL,"10")
-  field (ONVL,"200")
-  field (TWVL,"1000")
-  field (ZRST,"10")
-  field (ONST,"200")
-  field (TWST,"1000")
-}
-
-record(mbbo, All:Set_Slider)
-{
-  #field (DTYP, "Raw Soft Channel")
-  field (DESC, "Set Slider_MinVAlue")
-  field (ZRVL,"0")
-  field (ONVL,"20000")
-  field (TWVL,"10000")
-  field (ZRST,"30000")
-  field (ONST,"40000")
-  field (TWST,"999999")
-}
-record(mbbo, All:Set_Slider_X)
-{
-  #field (DTYP, "Raw Soft Channel")
-  field (DESC, "Set Slider_Max-X")
-  field (ZRVL,"0")
-  field (ONVL,"100000")
-  field (TWVL,"200000")
-  field (THVL,"300000")
-  field (FRVL,"400000")
-  field (FVVL,"0")
-  field (ZRST,"99999")
-  field (ONST,"199999")
-  field (TWST,"299999")
-  field (THST,"399999")
-  field (FRST,"499999")
-  field (FVST,"999999")
-  field(FLNK,"All:Make_Min")
-  field(PINI,"YES")
-}
-record(mbbo, All:Set_Slider_Y)
-{
-  #field (DTYP, "Raw Soft Channel")
-  field (DESC, "Set Slider_Max-Y")
-  field (ZRVL,"0")
-  field (ONVL,"100000")
-  field (TWVL,"200000")
-  field (THVL,"300000")
-  field (FRVL,"400000")
-  field (FVVL,"0")
-  field (ZRST,"99999")
-  field (ONST,"199999")
-  field (TWST,"299999")
-  field (THST,"399999")
-  field (FRST,"499999")
-  field (FVST,"999999")
-  field(FLNK,"All:Make_Min")
-  field(PINI,"YES")
-}
-record(calcout,All:Make_Min)
-{
-field(CALC,"A")
-field(INPA,"All:Set_Slider_Max.VAL")
-field(OUT,"All:Set_Slider_Min PP")
-}
+#common commands-----------------------------------------
+# record(mbbo, All:Set_Ranges)
+# {
+#   #field (DTYP, "Raw Soft Channel")
+#   field (DESC, "Set Ranges")
+#   field (ZRVL,"10")
+#   field (ONVL,"200")
+#   field (TWVL,"1000")
+#   field (ZRST,"10")
+#   field (ONST,"200")
+#   field (TWST,"1000")
+# }
 
 
-record(mbbo, All:Set_Slider_Min)
-{
-  #field (DTYP, "Raw Soft Channel")
-  field (DESC, "Set Slider_MaxVAlue")
-  field (ZRVL,"0")
-  field (ZRST,"0")
-  field (ONST,"200000")
-  field (TWST,"0")
-}
+# record(mbbo, All:Set_Slider)
+# {
+#   #field (DTYP, "Raw Soft Channel")
+#   field (DESC, "Set Slider_MinVAlue")
+#   field (ZRVL,"0")
+#   field (ONVL,"20000")
+#   field (TWVL,"10000")
+#   field (ZRST,"30000")
+#   field (ONST,"40000")
+#   field (TWST,"999999")
+# }
+# record(mbbo, All:Set_Slider_X)
+# {
+#   #field (DTYP, "Raw Soft Channel")
+#   field (DESC, "Set Slider_Max-X")
+#   field (ZRVL,"0")
+#   field (ONVL,"100000")
+#   field (TWVL,"200000")
+#   field (THVL,"300000")
+#   field (FRVL,"400000")
+#   field (FVVL,"0")
+#   field (ZRST,"99999")
+#   field (ONST,"199999")
+#   field (TWST,"299999")
+#   field (THST,"399999")
+#   field (FRST,"499999")
+#   field (FVST,"999999")
+#   field(FLNK,"All:Make_Min")
+#   field(PINI,"YES")
+# }
+# record(mbbo, All:Set_Slider_Y)
+# {
+#   #field (DTYP, "Raw Soft Channel")
+#   field (DESC, "Set Slider_Max-Y")
+#   field (ZRVL,"0")
+#   field (ONVL,"100000")
+#   field (TWVL,"200000")
+#   field (THVL,"300000")
+#   field (FRVL,"400000")
+#   field (FVVL,"0")
+#   field (ZRST,"99999")
+#   field (ONST,"199999")
+#   field (TWST,"299999")
+#   field (THST,"399999")
+#   field (FRST,"499999")
+#   field (FVST,"999999")
+#   field(FLNK,"All:Make_Min")
+#   field(PINI,"YES")
+# }
+# record(calcout,All:Make_Min)
+# {
+# field(CALC,"A")
+# field(INPA,"All:Set_Slider_Max.VAL")
+# field(OUT,"All:Set_Slider_Min PP")
+# }
 
+
+# record(mbbo, All:Set_Slider_Min)
+# {
+#   #field (DTYP, "Raw Soft Channel")
+#   field (DESC, "Set Slider_MaxVAlue")
+#   field (ZRVL,"0")
+#   field (ZRST,"0")
+#   field (ONST,"200000")
+#   field (TWST,"0")
+# }
+# record(ao, All:GroupX) {
+#       field(DESC, "Group X quadruople")
+#       field (DRVL, "0")
+#       field (DRVH, "999999")
+#       field (FLNK, "All:GroupX_chk")
+#   }
+# record(fanout, All:GroupX_chk) {
+#     field(LNK1, "All:GroupX_1")
+#     field(LNK2, "All:GroupX_2")
+#     field(LNK3, "All:GroupX_3")
+#     field(LNK4, "All:GroupX_4")
+#     field(LNK5, "All:GroupX_5")
+#     field(LNK6, "All:GroupX_6")
+#     field(LNK7, "All:GroupX_7")
+#     field(LNK8, "All:GroupX_8")
+# }
+
+# record(bo, All:Set_Gp1X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp2X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp3X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"1")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp4X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"1")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp5X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp6X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"0")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp7X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"1")
+#   field(PINI,"1")
+# }
+# record(bo, All:Set_Gp8X)
+# {
+#   field(ONAM, "On")
+#   field(ZNAM, "Off")
+#   field(VAL,"1")
+#   field(PINI,"1")
+# }
+# record(calcout, All:GroupX_1) {
+#     field(DESC, "test gp1X1 selection")
+#     field(CALC, "(A<=0)?0:B") 
+#     field(INPA, "All:Set_Gp1X.RVAL ")
+#     field(INPB, "All:GroupX.RVAL")
+#     field(OOPT, "When Non-zero")
+#     field(OUT, "QDX41:SetI_con CP MS")
+#  }
+
+
+#end all--------------------
 record(bi, $(USER):INC_BIT)
 {
   field(DESC, "Read INC bit")
