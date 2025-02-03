@@ -1,0 +1,10 @@
+# autosave R5.3	Automatically generated - DO NOT MODIFY - 250131-190255
+QDX41:ON_CMD 0
+QDX41:SetI_con 160000
+QDX41:ON_CMD_Restore 0
+QDX41:SetI_con_Restore 0
+QDY41:ON_CMD 0
+QDY41:SetI_con 160000
+QDY41:ON_CMD_Restore 0
+QDY41:SetI_con_Restore 0
+<END>

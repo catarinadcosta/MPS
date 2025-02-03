@@ -355,7 +355,43 @@ record (ao, $(USER):SetI_con)
   #field (DOL, "$(USER):InrDcr_SetI.VAL NPP NMS")
   #field (OOPT, "Every Time")
   field (ADEL, "1")
- }   
+  field(FLNK,"$(USER):To_SliderCal")
+ } 
+record (ao, $(USER):Slider_con)
+{
+  field (DESC, "SetCurrent using slider")
+  field (DRVL, "0")
+  field (DRVH, "999999")
+  field (PREC, "1")
+  field (EGU, "BIT")
+  field (FLNK,"$(USER):To_SetI_cal")
+ } 
+record(calcout, $(USER):To_SliderCal)
+{
+  field(CALC, "A")
+  field(INPA, "$(USER):SetI_con")
+  field(OUT,  "$(USER):Slider_con PP")
+}
+
+record(calcout, $(USER):To_SetI_cal)
+{
+  field(CALC, "A")
+  field(INPA, "$(USER):Slider_con")
+  field(FLNK, "$(USER):Setdelay")
+}
+
+record(seq,$(USER):Setdelay)
+{
+field(DESC, "sset delay")
+field(DOL0,"$(USER):To_SetI_cal.VAL PP")
+field(LNK0,"$(USER):SetI_con PP MS")
+field(DLY0, "1")
+}
+
+
+
+
+
 #common commands-----------------------------------------
 # record(mbbo, All:Set_Ranges)
 # {
